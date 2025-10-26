@@ -67,3 +67,31 @@ nav > div:last-child a:hover {
     color: var(--secondary-color);
 }
 
+/*social media */
+section:nth-child(2) {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap; /* Prevent wrapping unless necessary for small screens */
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border-bottom: 1px solid var(--card-background);
+}
+
+section:nth-child(2) img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 0 15px;
+    cursor: pointer;
+    border: 3px solid var(--primary-color);
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+section:nth-child(2) img:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
