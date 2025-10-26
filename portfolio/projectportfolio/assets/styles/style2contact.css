@@ -95,3 +95,116 @@ section:nth-child(2) img:hover {
     opacity: 0.8;
 }
 
+/*contact*/
+section:nth-child(3) article {
+    display: flex;
+    gap: 50px;
+    padding: 40px 0;
+
+    background-color: var(--background-dark);
+}
+
+
+section:nth-child(3) article figure:first-child {
+    flex: 2;
+    background-color: var(--card-background);
+    padding: 40px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    /* FIX: Center the text "make something amazing" */
+    text-align: center;
+}
+
+section:nth-child(3) article figure:first-child a {
+    font-size: 2.5em;
+    color: var(--primary-color);
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-decoration: none;
+    line-height: 1.2;
+}
+
+
+section:nth-child(3) article figure:first-child label {
+    color: var(--secondary-color);
+    font-weight: bold;
+    margin-bottom: 5px;
+    margin-top: 15px;
+}
+
+
+section:nth-child(3) article figure:first-child input[type="search"] {
+
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid var(--text-faded);
+    background-color: var(--background-dark);
+    color: var(--secondary-color);
+    border-radius: 5px;
+    font-size: 1em;
+    transition: border-color 0.3s;
+}
+
+section:nth-child(3) article figure:first-child input[type="search"]:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+
+section:nth-child(3) article figure:first-child input:nth-last-of-type(2) {
+    min-height: 100px;
+    /* Important: Changed 'input[type="search"]' to 'textarea' in a real scenario, but kept as is for exact code fix */
+}
+
+
+section:nth-child(3) article figure:first-child input[type="button"] {
+    background-color: var(--primary-color);
+    color: var(--background-dark);
+    border: none;
+    padding: 12px 30px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: opacity 0.3s;
+    text-transform: uppercase;
+    font-size: 1.1em;
+    margin-top: 10px;
+    width: 100%;
+}
+
+section:nth-child(3) article figure:first-child input[type="button"]:hover {
+    opacity: 0.9;
+}
+
+
+
+section:nth-child(3) article figure:last-child {
+    flex: 1;
+    background-color: var(--card-background);
+    padding: 40px;
+    border-radius: 8px;
+    border-left: 5px solid var(--primary-color);
+    line-height: 1.8;
+}
+
+
+section:nth-child(3) article figure:last-child p:nth-child(odd) {
+
+    font-family: 'Courier New', monospace;
+    color: var(--secondary-color);
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+
+section:nth-child(3) article figure:last-child p:nth-child(even) {
+    color: var(--text-faded);
+    font-size: 1em;
+}
+
+/*
