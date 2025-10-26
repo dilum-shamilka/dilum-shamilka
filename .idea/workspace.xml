@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d839429b-8464-486a-8726-0152f4d134ca" name="Changes" comment="footerandcss colouradd,responcive">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="d839429b-8464-486a-8726-0152f4d134ca" name="Changes" comment="footer" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -90,6 +88,7 @@
       <workItem from="1761360209312" duration="1931000" />
       <workItem from="1761371203476" duration="613000" />
       <workItem from="1761372663753" duration="154000" />
+      <workItem from="1761393594167" duration="2109000" />
     </task>
     <task id="LOCAL-00001" summary="add nomalize.css">
       <option name="closed" value="true" />
@@ -331,17 +330,53 @@
       <option name="project" value="LOCAL" />
       <updated>1761360784526</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="start contact">
+      <option name="closed" value="true" />
+      <created>1761394004344</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1761394004344</updated>
+    </task>
+    <task id="LOCAL-00032" summary="intro">
+      <option name="closed" value="true" />
+      <created>1761394088620</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1761394088620</updated>
+    </task>
+    <task id="LOCAL-00033" summary="add social media links">
+      <option name="closed" value="true" />
+      <created>1761394233931</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1761394233931</updated>
+    </task>
+    <task id="LOCAL-00034" summary="otherpage of contacts">
+      <option name="closed" value="true" />
+      <created>1761394437611</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1761394437611</updated>
+    </task>
+    <task id="LOCAL-00035" summary="footer">
+      <option name="closed" value="true" />
+      <created>1761394558280</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1761394558280</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value=" aboutpage add" />
-    <MESSAGE value=" aboutpage add 2" />
-    <MESSAGE value="add skill in about page" />
-    <MESSAGE value="add education section add" />
     <MESSAGE value="add experince section add" />
     <MESSAGE value="add footer section add" />
     <MESSAGE value="colours add" />
@@ -357,12 +392,16 @@
     <MESSAGE value="&#10;home introduction 3" />
     <MESSAGE value="projects" />
     <MESSAGE value="assigment" />
-    <MESSAGE value="footer" />
     <MESSAGE value="homecss colouradd" />
     <MESSAGE value="navcss colouradd" />
     <MESSAGE value="introcss colouradd" />
     <MESSAGE value="home,projectcss colouradd" />
     <MESSAGE value="footerandcss colouradd,responcive" />
-    <option name="LAST_COMMIT_MESSAGE" value="footerandcss colouradd,responcive" />
+    <MESSAGE value="start contact" />
+    <MESSAGE value="intro" />
+    <MESSAGE value="add social media links" />
+    <MESSAGE value="otherpage of contacts" />
+    <MESSAGE value="footer" />
+    <option name="LAST_COMMIT_MESSAGE" value="footer" />
   </component>
 </project>
