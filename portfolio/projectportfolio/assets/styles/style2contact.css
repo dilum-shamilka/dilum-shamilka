@@ -207,4 +207,194 @@ section:nth-child(3) article figure:last-child p:nth-child(even) {
     font-size: 1em;
 }
 
-/*
+/*footer*/
+footer {
+    padding: 50px 8% 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+    background-color: var(--background-dark);
+}
+
+footer hr {
+    border: none;
+    height: 1px;
+    background-color: var(--card-background);
+}
+
+
+footer article > figure:first-child {
+    text-align: center;
+    padding: 40px 0;
+    position: relative;
+
+}
+
+
+footer article > figure:first-child::before,
+footer article > figure:first-child::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 1400px;
+    height: 1px;
+    background-color: var(--primary-color);
+}
+
+footer article > figure:first-child::before {
+    top: 0;
+    box-shadow: 0 5px 0 0 var(--primary-color);
+}
+
+footer article > figure:first-child::after {
+    bottom: 0;
+    box-shadow: 0 -5px 0 0 var(--primary-color);
+}
+
+footer h3 {
+    font-size: 2.5em;
+    color: var(--secondary-color);
+}
+
+
+footer article > figure:last-child {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 30px;
+}
+
+footer figure:last-child p {
+    font-size: 0.8em;
+    color: var(--text-faded);
+    line-height: 1.4;
+}
+
+footer figure:last-child div:first-child p:first-child {
+    font-weight: bold;
+    color: var(--secondary-color);
+    font-size: 1em;
+}
+
+footer figure:last-child div:nth-child(2) {
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+/*responsive*/
+@media (max-width: 1440px) {
+    /* No major changes */
+}
+
+/* Laptop (Max 1024px) */
+@media (max-width: 1024px) {
+    section {
+        padding: 40px 6%;
+    }
+    nav {
+        padding: 15px 6%;
+    }
+}
+
+/* Tablet (Max 768px) */
+@media (max-width: 768px) {
+    /* Contact Section: Stack columns vertically */
+    section:nth-child(3) article {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    section:nth-child(3) article figure:last-child {
+        /* Move green line from left to top when stacked */
+        border-left: none;
+        border-top: 5px solid var(--primary-color);
+    }
+
+    /* Footer: Stacked content */
+    footer article > figure:last-child {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    footer figure:last-child div {
+        width: 100%; /* Ensure content takes full width */
+    }
+}
+
+/* Mobile Large (Max 425px) */
+@media (max-width: 425px) {
+    section {
+        padding: 30px 5%;
+    }
+
+    /* Navigation Bar: Stacked items */
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        padding: 15px 5%;
+    }
+
+    nav > div:last-child a {
+        margin-left: 15px;
+        font-size: 1em; /* Slight reduction for space */
+    }
+
+    /* Social Media Icons: Reduce size slightly */
+    section:nth-child(2) img {
+        width: 45px;
+        height: 45px;
+        margin: 0 8px;
+    }
+
+    /* Contact Form */
+    section:nth-child(3) article figure:first-child {
+        padding: 30px 20px;
+    }
+
+    section:nth-child(3) article figure:first-child a {
+        font-size: 2em;
+    }
+}
+
+
+/* Mobile Medium (Max 375px) */
+@media (max-width: 375px) {
+    /* Social Media: Allow icons to wrap if they are too many */
+    section:nth-child(2) {
+        flex-wrap: wrap;
+    }
+
+    /* Contact Info Block: Reduce font size for dense content */
+    section:nth-child(3) article figure:last-child p:nth-child(odd) {
+        font-size: 1.1em;
+    }
+    section:nth-child(3) article figure:last-child p:nth-child(even) {
+        font-size: 0.9em;
+    }
+}
+
+
+/* Mobile Small (Max 320px) */
+@media (max-width: 320px) {
+    /* Global Section H1 - If there was an h1 tag, it would be reduced here */
+    /* Assuming a missing H1 definition here, let's target the largest text in the footer */
+    footer h3 {
+        font-size: 2em;
+    }
+
+    /* Navigation: Further reduction in link size and spacing */
+    nav > div:last-child a {
+        margin-left: 10px;
+        font-size: 0.9em;
+    }
+
+    /* Social Media Icons: Force smaller size for 320px screen */
+    section:nth-child(2) img {
+        width: 40px;
+        height: 40px;
+        margin: 0 5px;
+    }
+}
