@@ -1,3 +1,8 @@
+/*
+
+ 1. GLOBAL RESET AND TYPOGRAPHY
+
+*/
 :root {
     --primary-color: #00B08D;
     --secondary-color: #F0F6FC;
@@ -31,7 +36,11 @@ section {
     margin: 0 auto;
 }
 
-/*navigation bar*/
+/*
+
+ 2. NAVIGATION BAR
+
+*/
 nav {
     display: flex;
     justify-content: space-between;
@@ -78,6 +87,13 @@ nav > div:last-child a:hover {
     color: var(--secondary-color);
 }
 
+
+/*
+
+ 3. ABOUT SECTION (WHO I AM)
+
+*/
+
 section:nth-child(1) article > div:first-child {
     display: flex;
     align-items: center;
@@ -85,7 +101,7 @@ section:nth-child(1) article > div:first-child {
     margin-bottom: 40px;
 }
 
-/*about me image and title*/
+
 section:nth-child(1) article > div:first-child > div:first-child {
     width: 300px;
     height: 300px;
@@ -119,7 +135,7 @@ section:nth-child(1) article > div:last-child p {
     color: var(--text-faded);
 }
 
-/*skills section*/
+
 section:nth-child(1) > h1 {
     font-size: 1.5em;
     color: var(--primary-color);
@@ -127,6 +143,10 @@ section:nth-child(1) > h1 {
     padding-top: 50px;
 }
 
+/*
+ 4. SKILLS SECTION (WHAT ARE MY SKILLS?)
+
+*/
 section:nth-child(2) {
     text-align: center;
 }
@@ -192,12 +212,16 @@ section:nth-child(2) a {
     text-transform: uppercase;
 }
 
+/*
+ 5. EDUCATION SECTION (WHAT ARE MY EDUCATION?)
+
+*/
 section:nth-child(3) h1 {
     color: var(--primary-color);
     text-align: center;
 }
 
-/*education*/
+
 section:nth-child(3) figure {
     display: flex;
     flex-direction: column;
@@ -241,7 +265,10 @@ section:nth-child(3) figure > div > div:last-child p:last-child {
     color: var(--text-faded);
     font-size: 0.9em;
 }
-/*work experience*/
+
+/*
+ * ADDITION FOR WORK EXPERIENCE SECTION
+ */
 #work-experience h1 {
     /* Set the color to the primary green color */
     color: var(--primary-color);
@@ -250,7 +277,7 @@ section:nth-child(3) figure > div > div:last-child p:last-child {
 
 
 /*
-footer section
+ 6. FOOTER SECTION (UPDATED FOR DOUBLE GREEN LINES)
 
 */
 footer {
@@ -288,7 +315,7 @@ footer article > figure:first-child::before {
     box-shadow: 0 5px 0 0 var(--primary-color);
 }
 
-/*work experince*/
+
 footer article > figure:first-child::after {
     content: '';
     position: absolute;
@@ -347,9 +374,11 @@ footer figure:last-child div:last-child a:hover {
     color: var(--secondary-color);
 }
 
-/* responive */
 
+/*
+ 7. MEDIA QUERIES (ENHANCED RESPONSIVENESS)
 
+*/
 
 /* Laptop Large (Max 1440px) - Handled well by base styles, but for consistency. */
 @media (max-width: 1440px) {

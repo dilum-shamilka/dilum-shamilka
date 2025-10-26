@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d839429b-8464-486a-8726-0152f4d134ca" name="Changes" comment="footer" />
+    <list default="true" id="d839429b-8464-486a-8726-0152f4d134ca" name="Changes" comment="changes">
+      <change beforePath="$PROJECT_DIR$/portfolio/projectportfolio/assets/styles/style1about.css" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/projectportfolio/assets/styles/style1about.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/projectportfolio/assets/styles/style2contact.css" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/projectportfolio/assets/styles/style2contact.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/projectportfolio/assets/styles/style3home.css" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/projectportfolio/assets/styles/style3home.css" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -89,6 +93,7 @@
       <workItem from="1761371203476" duration="613000" />
       <workItem from="1761372663753" duration="154000" />
       <workItem from="1761393594167" duration="2109000" />
+      <workItem from="1761454238144" duration="4336000" />
     </task>
     <task id="LOCAL-00001" summary="add nomalize.css">
       <option name="closed" value="true" />
@@ -370,19 +375,61 @@
       <option name="project" value="LOCAL" />
       <updated>1761394558280</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="contact colour css">
+      <option name="closed" value="true" />
+      <created>1761454381681</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1761454381681</updated>
+    </task>
+    <task id="LOCAL-00037" summary="navbar css">
+      <option name="closed" value="true" />
+      <created>1761454466022</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1761454466022</updated>
+    </task>
+    <task id="LOCAL-00038" summary="socialmeadia css">
+      <option name="closed" value="true" />
+      <created>1761454519809</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1761454519809</updated>
+    </task>
+    <task id="LOCAL-00039" summary="contact css">
+      <option name="closed" value="true" />
+      <created>1761454576440</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1761454576440</updated>
+    </task>
+    <task id="LOCAL-00040" summary="responcive css">
+      <option name="closed" value="true" />
+      <created>1761454660421</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1761454660421</updated>
+    </task>
+    <task id="LOCAL-00041" summary="changes">
+      <option name="closed" value="true" />
+      <created>1761454726720</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1761454726720</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add experince section add" />
-    <MESSAGE value="add footer section add" />
-    <MESSAGE value="colours add" />
-    <MESSAGE value="colours navbaradd" />
-    <MESSAGE value="about section" />
-    <MESSAGE value="skillcss section" />
     <MESSAGE value="educationcss section" />
     <MESSAGE value="workexperince css section" />
     <MESSAGE value="footercss section" />
@@ -402,6 +449,12 @@
     <MESSAGE value="add social media links" />
     <MESSAGE value="otherpage of contacts" />
     <MESSAGE value="footer" />
-    <option name="LAST_COMMIT_MESSAGE" value="footer" />
+    <MESSAGE value="contact colour css" />
+    <MESSAGE value="navbar css" />
+    <MESSAGE value="socialmeadia css" />
+    <MESSAGE value="contact css" />
+    <MESSAGE value="responcive css" />
+    <MESSAGE value="changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="changes" />
   </component>
 </project>
