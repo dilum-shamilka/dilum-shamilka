@@ -5,6 +5,35 @@
     <meta charset="UTF-8">
     <title>DILUM SHAMILKA - About</title>
     <link rel="stylesheet" href="assets/styles/style1about.css">
+
+    <style>
+        /* 1. Fade-in for Main Content (Still useful for the content visible on initial load) */
+        #main-content {
+            opacity: 0;
+            transition: opacity 1s ease-out;
+        }
+
+        /* 2. Initial state for all sections (SLIDE-IN from the left and fade) */
+        .reveal-section {
+            opacity: 0; /* Starts transparent */
+            transform: translateX(-50px); /* Starts 50px off-screen to the left */
+            /* Define the smooth transition */
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        /* 3. Final state (This class is added by JavaScript when the section enters the viewport) */
+        .reveal-section.visible {
+            opacity: 1; /* Fully visible */
+            transform: translateX(0); /* Final position */
+        }
+
+        /* Keeping .skill-icon styles reset in case they were added by the main stylesheet */
+        .skill-icon {
+            /* Ensure skill icons are visible if they don't use the reveal-section class directly */
+            opacity: 1;
+            transform: none;
+        }
+    </style>
 </head>
 
 <body>
@@ -60,6 +89,7 @@
                     </a>
                 </div>
             </div>
+
             <div class="skill-icon">
                 <div>
                     <img src="assets/images/pngegg.png" alt="MySQL icon">
@@ -190,3 +220,45 @@
         </article>
     </footer>
 </main>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // 1. Initial Fade-in for the main content (visible on page load)
+        const mainContent = document.getElementById('main-content');
+        if (mainContent) {
+            mainContent.style.opacity = '1';
+        }
+
+        // 2. Set up the Intersection Observer for all sections
+        const sectionsToReveal = document.querySelectorAll('.reveal-section');
+
+        // Configuration for the Intersection Observer
+        const observerOptions = {
+            // Root margin: Defines the area around the viewport.
+            // -100px means the animation triggers 100px before the bottom of the screen.
+            rootMargin: '0px 0px -100px 0px',
+            threshold: 0.1 // Triggers when 10% of the element is visible
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                // Check if the section is currently intersecting (i.e., visible in the viewport)
+                if (entry.isIntersecting) {
+                    // Add the 'visible' class to start the CSS transition (slide-in)
+                    entry.target.classList.add('visible');
+
+                    // Stop observing the element once it has been revealed
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // Start observing each section
+        sectionsToReveal.forEach(section => {
+            observer.observe(section);
+        });
+    });
+</script>
+
+</body>
+</html>

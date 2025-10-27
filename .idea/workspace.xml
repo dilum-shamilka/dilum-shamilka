@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d839429b-8464-486a-8726-0152f4d134ca" name="Changes" comment="changes">
-      <change beforePath="$PROJECT_DIR$/portfolio/projectportfolio/assets/styles/style1about.css" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/projectportfolio/assets/styles/style1about.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/projectportfolio/assets/styles/style2contact.css" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/projectportfolio/assets/styles/style2contact.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/projectportfolio/assets/styles/style3home.css" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/projectportfolio/assets/styles/style3home.css" afterDir="false" />
-    </list>
+    <list default="true" id="d839429b-8464-486a-8726-0152f4d134ca" name="Changes" comment="changes" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -94,6 +90,7 @@
       <workItem from="1761372663753" duration="154000" />
       <workItem from="1761393594167" duration="2109000" />
       <workItem from="1761454238144" duration="4336000" />
+      <workItem from="1761462340116" duration="119000" />
     </task>
     <task id="LOCAL-00001" summary="add nomalize.css">
       <option name="closed" value="true" />
@@ -423,7 +420,15 @@
       <option name="project" value="LOCAL" />
       <updated>1761454726720</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="changes">
+      <option name="closed" value="true" />
+      <created>1761462349634</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1761462349634</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
