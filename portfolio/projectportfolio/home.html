@@ -10,6 +10,29 @@
     <title>Dilum Shamilka</title>
     <link rel="stylesheet" href="assets/styles/style3home.css">
 
+    <style>
+        /* 1. Initial State: Set up for the initial page load fade-in */
+        #main-content {
+            transition: opacity 0.8s ease-in;
+            opacity: 0;
+        }
+
+        /* 2. State for elements that will be revealed on scroll */
+        .reveal-section {
+            /* Initial position (off-screen or slightly below) and opacity (hidden) */
+            transform: translateY(30px); /* Adjust vertical starting point */
+            opacity: 0;
+            /* Transition properties (adjust timing as needed) */
+            transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+            will-change: opacity, transform; /* Optimization hint */
+        }
+
+        /* 3. Final State: When the 'visible' class is added by JavaScript */
+        .reveal-section.visible {
+            transform: translateY(0); /* Move to original position */
+            opacity: 1; /* Fade to visible */
+        }
+    </style>
 </head>
 
 <body>
@@ -50,7 +73,8 @@
                     <img src="assets/images/WhatsApp%20Image%202025-10-06%20at%2010.27.30.jpeg">
                 </div>
             </article>
-        </section>\
+        </section>
+
         <section class="reveal-section">
             <article>
                 <p>
@@ -83,6 +107,7 @@
                         </a>
                     </div>
                 </figure>
+
                 <figure>
                     <div>
                         <img src="assets/images/web-button.png">
@@ -117,6 +142,7 @@
 
             </article>
         </section>
+
         <section class="reveal-section">
             <article>
                 <p>
@@ -199,6 +225,7 @@
             </article>
 
         </section>
+
         <section class="reveal-section">
             <article>
                 <figure>
@@ -241,6 +268,7 @@
                 </figure>
             </article>
         </section>
+
         <footer class="reveal-section">
             <article>
                 <figure>
@@ -265,3 +293,45 @@
         </footer>
     </main>
 </div>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // 1. Initial Fade-in for the main content (visible on page load)
+        const mainContent = document.getElementById('main-content');
+        if (mainContent) {
+            // This line actually starts the fade-in because the CSS initially set it to opacity: 0
+            mainContent.style.opacity = '1';
+        }
+
+        // 2. Setup the Intersection Observer for all sections
+        const sectionsToReveal = document.querySelectorAll('.reveal-section');
+
+        // Configuration for the Intersection Observer
+        const observerOptions = {
+            // Root margin: Defines the area around the viewport.
+            // -100px means the animation triggers 100px before the bottom of the screen.
+            rootMargin: '0px 0px -100px 0px',
+            threshold: 0.1 // Triggers when 10% of the element is visible
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                // Check if the section is currently intersecting (i.e., visible in the viewport)
+                if (entry.isIntersecting) {
+                    // Add the 'visible' class to start the CSS transition (slide-in)
+                    entry.target.classList.add('visible');
+
+                    // Stop observing the element once it has been revealed
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // Start observing each section
+        sectionsToReveal.forEach(section => {
+            observer.observe(section);
+        });
+    });
+</script>
+</body>
+
+</html>
