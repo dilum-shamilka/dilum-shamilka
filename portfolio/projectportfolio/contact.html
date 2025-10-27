@@ -4,7 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <title>DILUM SHAMILKA</title>
+    <style>
+        /* 1. Initial State: Set up for the fade-in animation for the main container */
+        #main-content {
+            transition: opacity 0.8s ease-in;
+            /* Starts hidden */
+            opacity: 0;
+        }
 
+        /* 2. Initial state for all sections: SLIDE-DOWN from the TOP and fade */
+        .reveal-section {
+            /* Initial position: 30px ABOVE its final spot */
+            transform: translateY(-30px);
+            /* Starts hidden */
+            opacity: 0;
+            /* Transition properties */
+            transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+            /* Optimization hint */
+            will-change: opacity, transform;
+        }
+
+        /* 3. Final State: When the 'visible' class is added by JavaScript */
+        .reveal-section.visible {
+            /* Final position: back to normal (0 offset) */
+            transform: translateY(0);
+            /* Fully visible */
+            opacity: 1;
+        }
+    </style>
     <link rel="stylesheet" href="assets/styles/style2contact.css">
 </head>
 
@@ -22,7 +49,6 @@
             <a href="contact.html">Contact</a>
         </div>
     </nav>
-
     <section class="social-links-section reveal-section">
         <a href="https://www.facebook.com/profile.php?id=100081284394455&mibextid=wwXIfr&mibextid=wwXIfr">
             <img src="assets/images/facebook.png" alt="Facebook">
@@ -108,4 +134,48 @@
         </article>
     </footer>
 </div>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Get all elements to be revealed
+        const sectionsToReveal = document.querySelectorAll('.reveal-section');
+        const mainContent = document.getElementById('main-content');
+
+        // 1. Initial Fade-in for the main content
+        if (mainContent) {
+            mainContent.style.opacity = '1';
+        }
+
+        // 2. Reveal the first section immediately (since it's likely visible on page load)
+        if (sectionsToReveal.length > 0) {
+            sectionsToReveal[0].classList.add('visible');
+        }
+
+        // 3. Setup the Intersection Observer for subsequent sections (starting from index 1)
+        const sectionsForObserver = Array.from(sectionsToReveal).slice(1);
+
+        // Configuration for the Intersection Observer
+        const observerOptions = {
+            // Trigger animation when the element is 100px before the bottom of the viewport
+            rootMargin: '0px 0px -100px 0px',
+            threshold: 0.1 // Triggers when 10% of the element is visible
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Add the 'visible' class to start the CSS transition (slide-down/fade-in)
+                    entry.target.classList.add('visible');
+                    // Stop observing the element once it has been revealed
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // Start observing sections from the second one onwards
+        sectionsForObserver.forEach(section => {
+            observer.observe(section);
+        });
+    });
+</script>
 </body>
+</html>
