@@ -7,32 +7,46 @@
     <link rel="stylesheet" href="assets/styles/style1about.css">
 
     <style>
-        /* 1. Fade-in for Main Content (Still useful for the content visible on initial load) */
-        #main-content {
+        /* 1. Initial State for Full Page Load:
+           Ensures content is hidden until the script loads, then smoothly fades in. */
+        body {
             opacity: 0;
-            transition: opacity 1s ease-out;
+            transition: opacity 1s ease-in; /* Controls the speed of the full-page fade-in */
         }
 
-        /* 2. Initial state for all sections (SLIDE-IN from the left and fade) */
-        .reveal-section {
+        /* 2. Initial state for all revealed elements (SLIDE-IN from the left and fade) */
+        .reveal-element {
             opacity: 0; /* Starts transparent */
             transform: translateX(-50px); /* Starts 50px off-screen to the left */
             /* Define the smooth transition */
-            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+            transition: opacity 0.8s cubic-bezier(0.445, 0.05, 0.55, 0.95), transform 0.8s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+            will-change: opacity, transform;
         }
 
-        /* 3. Final state (This class is added by JavaScript when the section enters the viewport) */
-        .reveal-section.visible {
+        /* Apply the generic reveal class to all sections and skill icons */
+        section, footer, .skill-icon {
+            /* Use the generic reveal class name for easier maintenance */
+            /* The .skill-icon elements also get the animation */
+            transition-delay: 0.1s; /* Slight delay for skill icons to appear after the section */
+        }
+
+        /* Ensure all elements that need to be revealed have the base reveal class */
+        section:not(.reveal-element), footer:not(.reveal-element), .skill-icon:not(.reveal-element) {
+            /* This is a safeguard if the HTML structure is complex */
+            /* The primary target for the animation should be the section or article itself */
+        }
+
+
+        /* 3. Final state (This class is added by JavaScript when the element enters the viewport) */
+        .reveal-element.visible {
             opacity: 1; /* Fully visible */
             transform: translateX(0); /* Final position */
         }
 
-        /* Keeping .skill-icon styles reset in case they were added by the main stylesheet */
-        .skill-icon {
-            /* Ensure skill icons are visible if they don't use the reveal-section class directly */
-            opacity: 1;
-            transform: none;
-        }
+        /* NOTE: I recommend applying the 'reveal-element' class directly to
+           <section>, <footer>, and <div class="skill-icon"> in the HTML,
+           as shown below, for a clean implementation. */
+
     </style>
 </head>
 
@@ -50,8 +64,8 @@
     </div>
 </nav>
 
-<main id="main-content">
-    <section class="reveal-section">
+<main>
+    <section class="reveal-element">
         <article>
             <div>
                 <div>
@@ -74,12 +88,12 @@
         </article>
     </section>
 
-    <section class="reveal-section">
+    <section class="reveal-element">
         <h1>
             WHAT ARE MY SKILLS?
         </h1>
         <article>
-            <div class="skill-icon">
+            <div class="skill-icon reveal-element">
                 <div>
                     <img src="assets/images/7e087ec355636ae1e83da6bae930b82d.png" alt="Java icon">
                 </div>
@@ -90,7 +104,7 @@
                 </div>
             </div>
 
-            <div class="skill-icon">
+            <div class="skill-icon reveal-element">
                 <div>
                     <img src="assets/images/pngegg.png" alt="MySQL icon">
                 </div>
@@ -101,7 +115,7 @@
                 </div>
             </div>
 
-            <div class="skill-icon">
+            <div class="skill-icon reveal-element">
                 <div>
                     <img src="assets/images/css3.svg" alt="CSS icon">
                 </div>
@@ -112,7 +126,7 @@
                 </div>
             </div>
 
-            <div class="skill-icon">
+            <div class="skill-icon reveal-element">
                 <div>
                     <img src="assets/images/html5.svg" alt="HTML icon">
                 </div>
@@ -123,7 +137,7 @@
                 </div>
             </div>
 
-            <div class="skill-icon">
+            <div class="skill-icon reveal-element">
                 <div>
                     <img src="assets/images/javascript.svg" alt="JavaScript icon">
                 </div>
@@ -134,7 +148,7 @@
                 </div>
             </div>
 
-            <div class="skill-icon">
+            <div class="skill-icon reveal-element">
                 <div>
                     <img src="assets/images/jquery.svg" alt="JQuery icon">
                 </div>
@@ -145,7 +159,7 @@
                 </div>
             </div>
 
-            <div class="skill-icon">
+            <div class="skill-icon reveal-element">
                 <div>
                     <img src="assets/images/figma.svg" alt="Figma icon">
                 </div>
@@ -158,7 +172,7 @@
         </article>
     </section>
 
-    <section class="reveal-section">
+    <section class="reveal-element">
         <h1>
             WHAT ARE MY EDUCATION?
         </h1>
@@ -180,7 +194,7 @@
         </figure>
     </section>
 
-    <section class="reveal-section" id="work-experience">
+    <section class="reveal-element" id="work-experience">
         <h1>
             WHAT IS MY WORK EXPERIENCE?
         </h1>
@@ -195,7 +209,7 @@
         </figure>
     </section>
 
-    <footer>
+    <footer class="reveal-element">
         <article>
             <hr>
             <figure>
@@ -223,19 +237,17 @@
 
 <script>
     document.addEventListener('DOMContentLoaded', () => {
-        // 1. Initial Fade-in for the main content (visible on page load)
-        const mainContent = document.getElementById('main-content');
-        if (mainContent) {
-            mainContent.style.opacity = '1';
-        }
+        // 1. Initial Page Fade-in:
+        // Sets the body opacity to 1, triggering the CSS transition for a smooth page load.
+        document.body.style.opacity = '1';
 
-        // 2. Set up the Intersection Observer for all sections
-        const sectionsToReveal = document.querySelectorAll('.reveal-section');
+        // 2. Set up the Intersection Observer for all scroll-reveal elements
+        // Target all elements with the new class 'reveal-element'
+        const elementsToReveal = document.querySelectorAll('.reveal-element');
 
         // Configuration for the Intersection Observer
         const observerOptions = {
-            // Root margin: Defines the area around the viewport.
-            // -100px means the animation triggers 100px before the bottom of the screen.
+            // Trigger animation 100px before the bottom of the element hits the bottom of the viewport.
             rootMargin: '0px 0px -100px 0px',
             threshold: 0.1 // Triggers when 10% of the element is visible
         };
@@ -253,9 +265,9 @@
             });
         }, observerOptions);
 
-        // Start observing each section
-        sectionsToReveal.forEach(section => {
-            observer.observe(section);
+        // Start observing each element
+        elementsToReveal.forEach(element => {
+            observer.observe(element);
         });
     });
 </script>

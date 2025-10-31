@@ -3,159 +3,151 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>DILUM SHAMILKA</title>
+    <title>DILUM SHAMILKA - Contact</title>
+    <link rel="stylesheet" href="assets/styles/style2contact.css">
+
     <style>
-        /* 1. Initial State: Set up for the fade-in animation for the main container */
-        #main-content {
-            transition: opacity 0.8s ease-in;
-            /* Starts hidden */
+        /* 1. Initial State for Full Page Load:
+           Ensures content is hidden until the script loads, then smoothly fades in. */
+        body {
             opacity: 0;
+            transition: opacity 1s ease-in; /* Controls the speed of the full-page fade-in */
         }
 
-        /* 2. Initial state for all sections: SLIDE-DOWN from the TOP and fade */
-        .reveal-section {
+        /* 2. Initial state for all revealed elements (SLIDE-DOWN from the TOP and fade) */
+        .reveal-element {
             /* Initial position: 30px ABOVE its final spot */
             transform: translateY(-30px);
             /* Starts hidden */
             opacity: 0;
-            /* Transition properties */
-            transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+            /* Define the smooth transition */
+            transition: opacity 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
             /* Optimization hint */
             will-change: opacity, transform;
         }
 
         /* 3. Final State: When the 'visible' class is added by JavaScript */
-        .reveal-section.visible {
+        .reveal-element.visible {
             /* Final position: back to normal (0 offset) */
             transform: translateY(0);
             /* Fully visible */
             opacity: 1;
         }
     </style>
-    <link rel="stylesheet" href="assets/styles/style2contact.css">
 </head>
 
 <body>
-<div id="main-content">
-    <nav>
-        <div>
-            <a>DILUM</a>
-            <a>DEVELOPER/DESIGNR</a>
+<nav>
+    <div>
+        <a>DILUM</a>
+        <a>DEVELOPER/DESIGNR</a>
+    </div>
+    <div>
+        <a href="home.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </div>
+</nav>
 
-        </div>
-        <div>
-            <a href="home.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
-        </div>
-    </nav>
-    <section class="social-links-section reveal-section">
-        <a href="https://www.facebook.com/profile.php?id=100081284394455&mibextid=wwXIfr&mibextid=wwXIfr">
-            <img src="assets/images/facebook.png" alt="Facebook">
-        </a>
-        <a href="https://github.com/dilum-shamilka/My-Portfolio">
-            <img src="assets/images/github.png" alt="github">
-        </a>
-        <a href="https://brand.linkedin.com/downloads">
-            <img src="assets/images/linkedin.png" alt="linkedin">
-        </a>
-        <a href="https://www.instagram.com/dilum_pahasara?igsh=eDEybjR3NGlsZjBw&utm_source=qr">
-            <img src="assets/images/Screenshot%202025-10-08%20013025.png" alt="instagram">
-        </a>
-    </section>
-    <section class="reveal-section">
-        <article>
-            <figure>
-                <a href="#">
-                    Let’s Work Together !
-                </a>
+<section class="social-links-section reveal-element">
+    <a href="https://www.facebook.com/profile.php?id=100081284394455&mibextid=wwXIfr&mibextid=wwXIfr">
+        <img src="assets/images/facebook.png" alt="Facebook">
+    </a>
+    <a href="https://github.com/dilum-shamilka/My-Portfolio">
+        <img src="assets/images/github.png" alt="github">
+    </a>
+    <a href="https://brand.linkedin.com/downloads">
+        <img src="assets/images/linkedin.png" alt="linkedin">
+    </a>
+    <a href="https://www.instagram.com/dilum_pahasara?igsh=eDEybjR3NGlsZjBw&utm_source=qr">
+        <img src="assets/images/Screenshot%202025-10-08%20013025.png" alt="instagram">
+    </a>
+</section>
 
-                <label for="search1">Name:</label>
-                <input type="search" id="search1" placeholder="Enter your name">
+<section class="reveal-element">
+    <article>
+        <figure>
+            <a href="#">
+                Let’s Work Together !
+            </a>
 
-                <label for="search2">Email:</label>
-                <input type="search" id="search2" placeholder="Enter your email">
+            <label for="search1">Name:</label>
+            <input type="search" id="search1" placeholder="Enter your name">
 
-                <label for="search3">Company:</label>
-                <input type="search" id="search3" placeholder="Enter company name (optional)">
+            <label for="search2">Email:</label>
+            <input type="search" id="search2" placeholder="Enter your email">
 
-                <label for="search4">Project Details:</label>
-                <input type="search" id="search4" placeholder="Briefly describe your project">
+            <label for="search3">Company:</label>
+            <input type="search" id="search3" placeholder="Enter company name (optional)">
 
-                <input type="button" value="Send Inquiry">
-            </figure>
-            <figure>
-                <p>
-                    Address
-                </p>
-                <br>
-                <p>
-                    63 mile post nuwaraeliya road welimada
-                </p>
-                <br>
-                <p>
-                    call
-                </p>
-                <br>
-                <p>
-                    +94728262003
-                </p>
-                <br>
-                <p>
-                    Email me
-                </p>
-                <br>
-                <p>
-                    dilumshamilka4@gmail.com
-                </p>
-                <br>
-            </figure>
-        </article>
-    </section>
-    <footer class="reveal-section">
-        <article>
-            <hr>
-            <figure>
-                <h3>
-                    Let's make something amazing!
-                </h3>
-            </figure>
-            <hr>
-            <figure>
-                <div>
-                    <P>DILUM </P>
-                    <P>DEVELOPER/DESIGNER</P>
-                    <P>© [2025] All rights reserved Crafted with care by Dilum Powered by pahasara</P>
-                </div>
-                <div>
-                    dilumshamilka4@gmail.com
-                </div>
-            </figure>
-        </article>
-    </footer>
-</div>
+            <label for="search4">Project Details:</label>
+            <input type="search" id="search4" placeholder="Briefly describe your project">
+
+            <input type="button" value="Send Inquiry">
+        </figure>
+        <figure>
+            <p>
+                Address
+            </p>
+            <br>
+            <p>
+                63 mile post nuwaraeliya road welimada
+            </p>
+            <br>
+            <p>
+                call
+            </p>
+            <br>
+            <p>
+                +94728262003
+            </p>
+            <br>
+            <p>
+                Email me
+            </p>
+            <br>
+            <p>
+                dilumshamilka4@gmail.com
+            </p>
+            <br>
+        </figure>
+    </article>
+</section>
+
+<footer class="reveal-element">
+    <article>
+        <hr>
+        <figure>
+            <h3>
+                Let's make something amazing!
+            </h3>
+        </figure>
+        <hr>
+        <figure>
+            <div>
+                <P>DILUM </P>
+                <P>DEVELOPER/DESIGNER</P>
+                <P>© [2025] All rights reserved Crafted with care by Dilum Powered by pahasara</P>
+            </div>
+            <div>
+                dilumshamilka4@gmail.com
+            </div>
+        </figure>
+    </article>
+</footer>
 <script>
     document.addEventListener('DOMContentLoaded', () => {
-        // Get all elements to be revealed
-        const sectionsToReveal = document.querySelectorAll('.reveal-section');
-        const mainContent = document.getElementById('main-content');
+        // 1. Initial Page Fade-in:
+        // Sets the body opacity to 1, triggering the CSS transition for a smooth page load.
+        document.body.style.opacity = '1';
 
-        // 1. Initial Fade-in for the main content
-        if (mainContent) {
-            mainContent.style.opacity = '1';
-        }
-
-        // 2. Reveal the first section immediately (since it's likely visible on page load)
-        if (sectionsToReveal.length > 0) {
-            sectionsToReveal[0].classList.add('visible');
-        }
-
-        // 3. Setup the Intersection Observer for subsequent sections (starting from index 1)
-        const sectionsForObserver = Array.from(sectionsToReveal).slice(1);
+        // 2. Set up the Intersection Observer for all scroll-reveal elements
+        // Target all elements with the new standardized class 'reveal-element'
+        const elementsToReveal = document.querySelectorAll('.reveal-element');
 
         // Configuration for the Intersection Observer
         const observerOptions = {
-            // Trigger animation when the element is 100px before the bottom of the viewport
+            // Trigger animation 100px before the bottom of the element hits the bottom of the viewport.
             rootMargin: '0px 0px -100px 0px',
             threshold: 0.1 // Triggers when 10% of the element is visible
         };
@@ -171,9 +163,9 @@
             });
         }, observerOptions);
 
-        // Start observing sections from the second one onwards
-        sectionsForObserver.forEach(section => {
-            observer.observe(section);
+        // Start observing each element
+        elementsToReveal.forEach(element => {
+            observer.observe(element);
         });
     });
 </script>
