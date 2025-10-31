@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d839429b-8464-486a-8726-0152f4d134ca" name="Changes" comment="add animation for home">
+    <list default="true" id="d839429b-8464-486a-8726-0152f4d134ca" name="Changes" comment="change colours of icons and photo sizes">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/projectportfolio/assets/styles/style1about.css" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/projectportfolio/assets/styles/style1about.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/projectportfolio/assets/styles/style2contact.css" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/projectportfolio/assets/styles/style2contact.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/portfolio/projectportfolio/assets/styles/style3home.css" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/projectportfolio/assets/styles/style3home.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/projectportfolio/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/projectportfolio/home.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +99,8 @@
       <workItem from="1761462340116" duration="119000" />
       <workItem from="1761533835935" duration="1338000" />
       <workItem from="1761654863741" duration="32000" />
-      <workItem from="1761914175737" duration="314000" />
+      <workItem from="1761914175737" duration="4042000" />
+      <workItem from="1761918528540" duration="761000" />
     </task>
     <task id="LOCAL-00001" summary="add nomalize.css">
       <option name="closed" value="true" />
@@ -459,15 +462,29 @@
       <option name="project" value="LOCAL" />
       <updated>1761534245719</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="add animation more">
+      <option name="closed" value="true" />
+      <created>1761916065609</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1761916065609</updated>
+    </task>
+    <task id="LOCAL-00047" summary="change colours of icons and photo sizes">
+      <option name="closed" value="true" />
+      <created>1761916088842</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1761916088842</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="home page start" />
-    <MESSAGE value="&#10;home introduction" />
     <MESSAGE value="&#10;home introduction 2" />
     <MESSAGE value="&#10;home introduction 3" />
     <MESSAGE value="projects" />
@@ -491,6 +508,19 @@
     <MESSAGE value="add animation for about" />
     <MESSAGE value="add animation for contact" />
     <MESSAGE value="add animation for home" />
-    <option name="LAST_COMMIT_MESSAGE" value="add animation for home" />
+    <MESSAGE value="add animation more" />
+    <MESSAGE value="change colours of icons and photo sizes" />
+    <option name="LAST_COMMIT_MESSAGE" value="change colours of icons and photo sizes" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/portfolio/projectportfolio/about.html</url>
+          <line>262</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

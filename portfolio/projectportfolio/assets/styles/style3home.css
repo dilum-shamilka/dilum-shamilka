@@ -475,7 +475,7 @@ footer figure:last-child div:last-child {
     font-size: initial;
 }
 
-/* Responsive adjustments for smaller screens */
+/* Responsive adjustments for smaller screens (Existing in the base block) */
 @media (max-width: 900px) {
     main>section:nth-child(1) {
         flex-direction: column-reverse; /* Put text above image on small screens */
@@ -530,5 +530,151 @@ footer figure:last-child div:last-child {
 
     footer h3 {
         font-size: 2em;
+    }
+}
+
+/*
+ 7. MEDIA QUERIES (ENHANCED RESPONSIVENESS)
+ (This is the detailed set of new media queries)
+*/
+
+/* Laptop Large (Max 1440px) - Handled well by base styles, but for consistency. */
+@media (max-width: 1440px) {
+    /* No major layout changes needed */
+}
+
+/* Laptop (Max 1024px) */
+@media (max-width: 1024px) {
+    section {
+        padding: 40px 6%;
+    }
+    nav {
+        padding: 15px 6%;
+    }
+}
+
+/* Tablet (Max 768px) - Stacking main content */
+@media (max-width: 768px) {
+    /* About Section: Stack image and text */
+    main>section:nth-child(1) {
+        /* Overrides the 900px rule for flex direction to apply specific tablet spacing */
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 30px;
+    }
+
+    /* FIX APPLIED: Adjusted photo size for tablet view */
+    main>section:nth-child(1) article:last-child img {
+        width: 250px;
+        height: 250px;
+    }
+
+    main>section:nth-child(1) article:first-child h1 {
+        font-size: 3.5em;
+    }
+
+    /* About Section: Ensure body text is readable (This target seems general, reviewing to match new structure) */
+    main>section:nth-child(1) article:first-child p {
+        text-align: center;
+        max-width: 100%;
+    }
+
+    /* Services Section: Adjust figure width to 2 columns */
+    main>section:nth-child(2) figure,
+    main>section:nth-child(3) figure {
+        width: calc(50% - 15px);
+    }
+
+    /* Footer: Stacked content (This rule is already largely covered by 900px/600px rules, but keeping for completeness) */
+    footer article>figure:last-child {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+        align-items: center; /* Center items for a stacked footer look */
+    }
+}
+
+
+/* Mobile Large (Max 425px) - Stacked navigation, smaller padding */
+@media (max-width: 425px) {
+    /* Reset section padding for smaller screens */
+    section {
+        padding: 30px 5%;
+    }
+
+    /* Navigation Bar: Stacked items */
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        padding: 15px 5%;
+    }
+
+    /* FIX APPLIED: Ensure Nav Links flow horizontally and wrap */
+    nav > div:last-child {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    nav > div:last-child a {
+        /* Reduced margin to allow more links per line */
+        margin-left: 0;
+        margin-right: 15px;
+        margin-bottom: 5px; /* Space between wrapped links */
+        font-size: 1em;
+    }
+
+    /* About Section: Smaller profile image, smaller name */
+    main>section:nth-child(1) article:last-child img {
+        width: 150px;
+        height: 150px;
+    }
+
+    main>section:nth-child(1) article:first-child h1 {
+        font-size: 3em;
+    }
+
+    /* Services/Projects: Single column on mobile */
+    main>section:nth-child(2) figure,
+    main>section:nth-child(3) figure {
+        width: 100%;
+        min-width: unset;
+    }
+}
+
+
+/* Mobile Medium (Max 375px) */
+@media (max-width: 375px) {
+    /* Skills Section: Adjust grid to allow for better fit */
+    main>section:nth-child(4) article {
+        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+        gap: 10px;
+    }
+
+    /* Footer header reduction */
+    footer h3 {
+        font-size: 1.8em;
+    }
+}
+
+
+/* Mobile Small (Max 320px) - Smallest common screen size */
+@media (max-width: 320px) {
+    /* Main H1 - Reduce overall size for readability */
+    h1 {
+        font-size: 2.2em;
+    }
+
+    /* Navigation: Make nav links even smaller to fit */
+    nav > div:last-child a {
+        /* This rule now inherits from 425px, just making text smaller */
+        font-size: 0.9em;
+    }
+
+    /* Skills: Ensure skills are still readable, force 2 per row */
+    main>section:nth-child(4) article {
+        grid-template-columns: repeat(2, 1fr);
     }
 }

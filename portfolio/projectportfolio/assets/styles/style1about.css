@@ -425,6 +425,13 @@ footer figure:last-child div:last-child a:hover {
         gap: 15px;
     }
 
+    /* FIX APPLIED: Education/Work Section: Stack content items vertically on tablet/mobile */
+    section:nth-child(3) figure > div {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
     /* Footer: Stacked content */
     footer article > figure:last-child {
         flex-direction: column;
@@ -452,8 +459,19 @@ footer figure:last-child div:last-child a:hover {
         padding: 15px 5%;
     }
 
+    /* FIX APPLIED: Ensure Nav Links flow horizontally and wrap */
+    nav > div:last-child {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: flex-start;
+    }
+
     nav > div:last-child a {
-        margin-left: 15px;
+        /* Reduced margin to allow more links per line */
+        margin-left: 0;
+        margin-right: 15px;
+        margin-bottom: 5px; /* Space between wrapped links */
         font-size: 1em;
     }
 
@@ -501,7 +519,7 @@ footer figure:last-child div:last-child a:hover {
 
     /* Navigation: Make nav links even smaller to fit */
     nav > div:last-child a {
-        margin-left: 10px;
+        /* This rule now inherits from 425px, just making text smaller */
         font-size: 0.9em;
     }
 

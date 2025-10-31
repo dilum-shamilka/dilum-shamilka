@@ -13,7 +13,7 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Inter', sans-serif;
     background-color: var(--background-dark);
     color: var(--secondary-color);
     line-height: 1.6;
@@ -24,6 +24,7 @@ section {
     max-width: 1400px;
     margin: 0 auto;
 }
+
 /*nav bar*/
 nav {
     display: flex;
@@ -69,7 +70,6 @@ nav > div:last-child a:hover {
 
 /*social media */
 section:nth-child(2) {
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -87,13 +87,13 @@ section:nth-child(2) img {
     margin: 0 15px;
     cursor: pointer;
 
-    /* ✅ MODIFIED: Set the background to green (primary color) */
+    /* Set the background to green (primary color) */
     background-color: var(--primary-color);
     border: none;
 
     transition: transform 0.3s, opacity 0.3s, box-shadow 0.3s;
 
-    /* ✅ MODIFIED: Invert filter to make the icon image itself white */
+    /* Invert filter to make the icon image itself white */
     filter: invert(1);
 }
 
@@ -109,7 +109,6 @@ section:nth-child(3) article {
     display: flex;
     gap: 50px;
     padding: 40px 0;
-
     background-color: var(--background-dark);
 }
 
@@ -136,15 +135,19 @@ section:nth-child(3) article figure:first-child a {
 
 
 section:nth-child(3) article figure:first-child label {
+    /* FIX: Set to block display so text-align: left can work relative to the form width */
+    display: block;
     color: var(--secondary-color);
     font-weight: bold;
     margin-bottom: 5px;
     margin-top: 15px;
+    text-align: left; /* Aligns labels to the left */
 }
 
 
-section:nth-child(3) article figure:first-child input[type="search"] {
-
+section:nth-child(3) article figure:first-child input[type="search"],
+section:nth-child(3) article figure:first-child textarea {
+    /* Changed input[type="search"] for the message box to a textarea in HTML below */
     width: 100%;
     padding: 15px;
     margin-bottom: 20px;
@@ -154,17 +157,18 @@ section:nth-child(3) article figure:first-child input[type="search"] {
     border-radius: 5px;
     font-size: 1em;
     transition: border-color 0.3s;
+    resize: vertical; /* Allow resizing of the textarea */
 }
 
-section:nth-child(3) article figure:first-child input[type="search"]:focus {
+section:nth-child(3) article figure:first-child input[type="search"]:focus,
+section:nth-child(3) article figure:first-child textarea:focus {
     border-color: var(--primary-color);
     outline: none;
 }
 
-
-section:nth-child(3) article figure:first-child input:nth-last-of-type(2) {
+/* Replaced the complex nth-last-of-type selector with a clear textarea selector */
+section:nth-child(3) article figure:first-child textarea {
     min-height: 100px;
-    /* Important: Changed 'input[type="search"]' to 'textarea' in a real scenario, but kept as is for exact code fix */
 }
 
 
@@ -338,6 +342,14 @@ footer figure:last-child div:nth-child(2) {
         padding: 30px 5%;
     }
 
+    /* FIX: Mobile Nav Stacking */
+    nav > div:last-child {
+        display: flex; /* Makes the container a flex box */
+        flex-direction: column; /* Stacks the links vertically */
+        align-items: flex-start; /* Aligns the links to the left */
+        width: 100%; /* Ensures the link container uses full width */
+    }
+
     /* Navigation Bar: Stacked items */
     nav {
         flex-direction: column;
@@ -347,7 +359,9 @@ footer figure:last-child div:nth-child(2) {
     }
 
     nav > div:last-child a {
-        margin-left: 15px;
+        margin-left: 0; /* FIX: Reset horizontal margin for stacking */
+        margin-top: 5px; /* Add vertical spacing between links */
+        padding: 5px 0; /* Add padding for better touch targets */
         font-size: 1em; /* Slight reduction for space */
     }
 
@@ -396,8 +410,9 @@ footer figure:last-child div:nth-child(2) {
 
     /* Navigation: Further reduction in link size and spacing */
     nav > div:last-child a {
-        margin-left: 10px;
+        margin-left: 0; /* FIX: Reset to 0 to maintain vertical alignment */
         font-size: 0.9em;
+        padding: 4px 0; /* Adjusted vertical padding */
     }
 
     /* Social Media Icons: Force smaller size for 320px screen */
