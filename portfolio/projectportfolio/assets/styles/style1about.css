@@ -48,7 +48,6 @@ nav {
     padding: 20px 8%;
     max-width: 1400px;
     margin: 0 auto;
-
     background-color: var(--card-background);
 }
 
@@ -102,15 +101,16 @@ section:nth-child(1) article > div:first-child {
 }
 
 
+/* --- FIX APPLIED: Increased size from 300px to 350px --- */
 section:nth-child(1) article > div:first-child > div:first-child {
-    width: 300px;
-    height: 300px;
+    width: 350px; /* Increased size */
+    height: 350px; /* Increased size */
     overflow: hidden;
     border-radius: 8px;
     position: relative;
-
     box-shadow: 0 0 20px rgba(0, 176, 141, 0.2);
 }
+/* ----------------------------------------------------------- */
 
 section:nth-child(1) img {
     width: 100%;
@@ -131,7 +131,6 @@ section:nth-child(1) article > div:first-child > div:last-child h1 {
 section:nth-child(1) article > div:last-child p {
     font-size: 1.1em;
     max-width: 800px;
-
     color: var(--text-faded);
 }
 
@@ -402,6 +401,12 @@ footer figure:last-child div:last-child a:hover {
         flex-direction: column;
         text-align: center;
         gap: 30px;
+    }
+
+    /* FIX APPLIED: Adjusted photo size for tablet view */
+    section:nth-child(1) article > div:first-child > div:first-child {
+        width: 250px;
+        height: 250px;
     }
 
     section:nth-child(1) article > div:first-child > div:last-child h1 {

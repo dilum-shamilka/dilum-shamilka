@@ -86,13 +86,22 @@ section:nth-child(2) img {
     border-radius: 50%;
     margin: 0 15px;
     cursor: pointer;
-    border: 3px solid var(--primary-color);
-    transition: transform 0.3s, opacity 0.3s;
+
+    /* ✅ MODIFIED: Set the background to green (primary color) */
+    background-color: var(--primary-color);
+    border: none;
+
+    transition: transform 0.3s, opacity 0.3s, box-shadow 0.3s;
+
+    /* ✅ MODIFIED: Invert filter to make the icon image itself white */
+    filter: invert(1);
 }
 
 section:nth-child(2) img:hover {
     transform: scale(1.1);
-    opacity: 0.8;
+    opacity: 1;
+    /* Maintains the green glow highlight on hover */
+    box-shadow: 0 0 15px rgba(0, 176, 141, 0.8), 0 0 5px var(--primary-color);
 }
 
 /*contact*/
