@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d839429b-8464-486a-8726-0152f4d134ca" name="Changes" comment="change colours of icons and photo sizes">
+    <list default="true" id="d839429b-8464-486a-8726-0152f4d134ca" name="Changes" comment="fix responsive isssue">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/projectportfolio/assets/styles/style1about.css" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/projectportfolio/assets/styles/style1about.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/projectportfolio/assets/styles/style2contact.css" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/projectportfolio/assets/styles/style2contact.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/projectportfolio/assets/styles/style3home.css" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/projectportfolio/assets/styles/style3home.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +97,9 @@
       <workItem from="1761533835935" duration="1338000" />
       <workItem from="1761654863741" duration="32000" />
       <workItem from="1761914175737" duration="4042000" />
-      <workItem from="1761918528540" duration="761000" />
+      <workItem from="1761918528540" duration="988000" />
+      <workItem from="1761969426582" duration="1080000" />
+      <workItem from="1761997446629" duration="584000" />
     </task>
     <task id="LOCAL-00001" summary="add nomalize.css">
       <option name="closed" value="true" />
@@ -478,14 +477,21 @@
       <option name="project" value="LOCAL" />
       <updated>1761916088842</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="fix responsive isssue">
+      <option name="closed" value="true" />
+      <created>1761919375034</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1761919375034</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="&#10;home introduction 2" />
     <MESSAGE value="&#10;home introduction 3" />
     <MESSAGE value="projects" />
     <MESSAGE value="assigment" />
@@ -510,7 +516,8 @@
     <MESSAGE value="add animation for home" />
     <MESSAGE value="add animation more" />
     <MESSAGE value="change colours of icons and photo sizes" />
-    <option name="LAST_COMMIT_MESSAGE" value="change colours of icons and photo sizes" />
+    <MESSAGE value="fix responsive isssue" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix responsive isssue" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
