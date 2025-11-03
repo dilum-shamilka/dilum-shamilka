@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d839429b-8464-486a-8726-0152f4d134ca" name="Changes" comment="fix responsive isssue">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="d839429b-8464-486a-8726-0152f4d134ca" name="Changes" comment="updates" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -100,22 +98,7 @@
       <workItem from="1761918528540" duration="988000" />
       <workItem from="1761969426582" duration="1080000" />
       <workItem from="1761997446629" duration="584000" />
-    </task>
-    <task id="LOCAL-00001" summary="add nomalize.css">
-      <option name="closed" value="true" />
-      <created>1761225698941</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1761225698941</updated>
-    </task>
-    <task id="LOCAL-00002" summary="cssfiles for indexs">
-      <option name="closed" value="true" />
-      <created>1761225741294</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1761225741294</updated>
+      <workItem from="1762007254647" duration="436000" />
     </task>
     <task id="LOCAL-00003" summary="add images file">
       <option name="closed" value="true" />
@@ -485,14 +468,37 @@
       <option name="project" value="LOCAL" />
       <updated>1761919375034</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="updates">
+      <option name="closed" value="true" />
+      <created>1762007470269</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1762007470269</updated>
+    </task>
+    <task id="LOCAL-00050" summary="updates">
+      <option name="closed" value="true" />
+      <created>1762007634253</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1762007634253</updated>
+    </task>
+    <task id="LOCAL-00051" summary="updates">
+      <option name="closed" value="true" />
+      <created>1762007691235</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1762007691235</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="&#10;home introduction 3" />
     <MESSAGE value="projects" />
     <MESSAGE value="assigment" />
     <MESSAGE value="homecss colouradd" />
@@ -517,7 +523,8 @@
     <MESSAGE value="add animation more" />
     <MESSAGE value="change colours of icons and photo sizes" />
     <MESSAGE value="fix responsive isssue" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix responsive isssue" />
+    <MESSAGE value="updates" />
+    <option name="LAST_COMMIT_MESSAGE" value="updates" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DILUM SHAMILKA - About</title>
     <link rel="stylesheet" href="assets/styles/style1about.css">
 
@@ -23,39 +24,20 @@
             will-change: opacity, transform;
         }
 
-        /* Apply the generic reveal class to all sections and skill icons */
-        section, footer, .skill-icon {
-            /* Use the generic reveal class name for easier maintenance */
-            /* The .skill-icon elements also get the animation */
-            transition-delay: 0.1s; /* Slight delay for skill icons to appear after the section */
-        }
-
-        /* Ensure all elements that need to be revealed have the base reveal class */
-        section:not(.reveal-element), footer:not(.reveal-element), .skill-icon:not(.reveal-element) {
-            /* This is a safeguard if the HTML structure is complex */
-            /* The primary target for the animation should be the section or article itself */
-        }
-
-
         /* 3. Final state (This class is added by JavaScript when the element enters the viewport) */
         .reveal-element.visible {
             opacity: 1; /* Fully visible */
             transform: translateX(0); /* Final position */
         }
-
-        /* NOTE: I recommend applying the 'reveal-element' class directly to
-           <section>, <footer>, and <div class="skill-icon"> in the HTML,
-           as shown below, for a clean implementation. */
-
     </style>
 </head>
 
 <body>
 <nav>
     <div>
-        <a>DILUM</a>
+        <a href="home.html">DILUM</a>
         <br>
-        <a>DEVELOPER/DESIGNR</a>
+        <a href="#">DEVELOPER/DESIGNR</a>
     </div>
     <div>
         <a href="home.html">Home</a>
@@ -66,6 +48,7 @@
 
 <main>
     <section class="reveal-element">
+        <h1>ABOUT</h1>
         <article>
             <div>
                 <div>
@@ -103,7 +86,6 @@
                     </a>
                 </div>
             </div>
-
             <div class="skill-icon reveal-element">
                 <div>
                     <img src="assets/images/pngegg.png" alt="MySQL icon">
@@ -238,34 +220,24 @@
 <script>
     document.addEventListener('DOMContentLoaded', () => {
         // 1. Initial Page Fade-in:
-        // Sets the body opacity to 1, triggering the CSS transition for a smooth page load.
         document.body.style.opacity = '1';
 
         // 2. Set up the Intersection Observer for all scroll-reveal elements
-        // Target all elements with the new class 'reveal-element'
         const elementsToReveal = document.querySelectorAll('.reveal-element');
-
-        // Configuration for the Intersection Observer
         const observerOptions = {
-            // Trigger animation 100px before the bottom of the element hits the bottom of the viewport.
             rootMargin: '0px 0px -100px 0px',
-            threshold: 0.1 // Triggers when 10% of the element is visible
+            threshold: 0.1
         };
 
         const observer = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
-                // Check if the section is currently intersecting (i.e., visible in the viewport)
                 if (entry.isIntersecting) {
-                    // Add the 'visible' class to start the CSS transition (slide-in)
                     entry.target.classList.add('visible');
-
-                    // Stop observing the element once it has been revealed
                     observer.unobserve(entry.target);
                 }
             });
         }, observerOptions);
 
-        // Start observing each element
         elementsToReveal.forEach(element => {
             observer.observe(element);
         });

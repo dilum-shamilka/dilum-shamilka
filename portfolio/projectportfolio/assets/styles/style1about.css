@@ -56,21 +56,24 @@ nav > div:first-child {
     line-height: 1.2;
 }
 
-
+/* FIX: Targeting the first link (DILUM) */
 nav > div:first-child a:first-child {
     font-size: 1.8em;
     font-weight: bold;
     color: var(--primary-color);
     text-decoration: none;
+    display: block; /* Ensure DILUM takes up its own line */
 }
 
 
+/* FIX: Targeting the second link (DEVELOPER/DESIGNR) */
 nav > div:first-child a:last-child {
     font-size: 0.8em;
     color: var(--primary-color);
     text-decoration: none;
     letter-spacing: 2px;
     opacity: 0.8;
+    display: block; /* Ensures it is on the next line after DILUM */
 }
 
 
@@ -93,6 +96,14 @@ nav > div:last-child a:hover {
 
 */
 
+/* The top-level 'ABOUT' heading added to the HTML */
+section:nth-child(1) > h1 {
+    font-size: 1.5em;
+    color: var(--primary-color);
+    letter-spacing: 5px;
+    padding-top: 50px;
+}
+
 section:nth-child(1) article > div:first-child {
     display: flex;
     align-items: center;
@@ -101,16 +112,15 @@ section:nth-child(1) article > div:first-child {
 }
 
 
-/* --- FIX APPLIED: Increased size from 300px to 350px --- */
 section:nth-child(1) article > div:first-child > div:first-child {
-    width: 350px; /* Increased size */
-    height: 350px; /* Increased size */
+    width: 350px;
+    height: 350px;
     overflow: hidden;
     border-radius: 8px;
     position: relative;
     box-shadow: 0 0 20px rgba(0, 176, 141, 0.2);
+    flex-shrink: 0; /* Prevents image container from shrinking */
 }
-/* ----------------------------------------------------------- */
 
 section:nth-child(1) img {
     width: 100%;
@@ -135,13 +145,6 @@ section:nth-child(1) article > div:last-child p {
 }
 
 
-section:nth-child(1) > h1 {
-    font-size: 1.5em;
-    color: var(--primary-color);
-    letter-spacing: 5px;
-    padding-top: 50px;
-}
-
 /*
  4. SKILLS SECTION (WHAT ARE MY SKILLS?)
 
@@ -157,6 +160,7 @@ section:nth-child(2) h1 {
 
 section:nth-child(2) article {
     display: grid;
+    /* Allows flexible columns, min of 120px */
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     gap: 20px;
     margin-top: 40px;
@@ -212,16 +216,15 @@ section:nth-child(2) a {
 }
 
 /*
- 5. EDUCATION SECTION (WHAT ARE MY EDUCATION?)
-
+ 5. EDUCATION SECTION (WHAT ARE MY EDUCATION?) & WORK EXPERIENCE
 */
-section:nth-child(3) h1 {
+section:nth-child(3) h1, #work-experience h1 {
     color: var(--primary-color);
     text-align: center;
 }
 
 
-section:nth-child(3) figure {
+section:nth-child(3) figure, #work-experience figure {
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -229,7 +232,7 @@ section:nth-child(3) figure {
 }
 
 
-section:nth-child(3) figure > div {
+section:nth-child(3) figure > div, #work-experience figure > div {
     display: flex;
     gap: 30px;
     background-color: var(--card-background);
@@ -246,6 +249,16 @@ section:nth-child(3) figure > div > div:first-child {
     border-radius: 50%;
     flex-shrink: 0;
 }
+/* Work Experience section content takes full width without a logo/icon */
+#work-experience figure > div {
+    /* If the inner structure of #work-experience is simplified, remove this */
+    display: block;
+}
+#work-experience figure p {
+    color: var(--text-faded);
+    font-size: 1em;
+}
+
 
 section:nth-child(3) figure img {
     width: 100%;
@@ -265,25 +278,15 @@ section:nth-child(3) figure > div > div:last-child p:last-child {
     font-size: 0.9em;
 }
 
-/*
- * ADDITION FOR WORK EXPERIENCE SECTION
- */
-#work-experience h1 {
-    /* Set the color to the primary green color */
-    color: var(--primary-color);
-    text-align: center; /* Center the new heading */
-}
-
 
 /*
- 6. FOOTER SECTION (UPDATED FOR DOUBLE GREEN LINES)
+ 6. FOOTER SECTION
 
 */
 footer {
     padding: 50px 8% 20px;
     max-width: 1400px;
     margin: 0 auto;
-
     background-color: var(--background-dark);
 }
 
@@ -299,32 +302,26 @@ footer article > figure:first-child {
     position: relative;
 }
 
-
-footer article > figure:first-child::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    max-width: 1400px;
-    height: 1px;
-    background-color: var(--primary-color);
-
-    box-shadow: 0 5px 0 0 var(--primary-color);
-}
-
-
+/* Footer Double Green Lines */
+footer article > figure:first-child::before,
 footer article > figure:first-child::after {
     content: '';
     position: absolute;
-    bottom: 0;
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
     max-width: 1400px;
     height: 1px;
     background-color: var(--primary-color);
+}
+
+footer article > figure:first-child::before {
+    top: 0;
+    box-shadow: 0 5px 0 0 var(--primary-color);
+}
+
+footer article > figure:first-child::after {
+    bottom: 0;
     box-shadow: 0 -5px 0 0 var(--primary-color);
 }
 
@@ -340,6 +337,9 @@ footer article > figure:last-child {
     justify-content: space-between;
     align-items: center;
     padding-top: 30px;
+    /* Added flex-wrap for mobile stacking */
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 footer figure:last-child p {
@@ -360,7 +360,6 @@ footer figure:last-child div:nth-child(2) {
     font-size: 1.1em;
 }
 
-
 footer figure:last-child div:last-child a {
     color: var(--primary-color);
     text-decoration: none;
@@ -379,7 +378,7 @@ footer figure:last-child div:last-child a:hover {
 
 */
 
-/* Laptop Large (Max 1440px) - Handled well by base styles, but for consistency. */
+/* Laptop Large (Max 1440px) */
 @media (max-width: 1440px) {
     /* No major layout changes needed */
 }
@@ -403,7 +402,6 @@ footer figure:last-child div:last-child a:hover {
         gap: 30px;
     }
 
-    /* FIX APPLIED: Adjusted photo size for tablet view */
     section:nth-child(1) article > div:first-child > div:first-child {
         width: 250px;
         height: 250px;
@@ -421,12 +419,13 @@ footer figure:last-child div:last-child a:hover {
 
     /* Skills Section: Adjust grid for tablets (more columns, smaller minimum) */
     section:nth-child(2) article {
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        /* Set to 3 columns to prevent too many small items */
+        grid-template-columns: repeat(3, 1fr);
         gap: 15px;
     }
 
-    /* FIX APPLIED: Education/Work Section: Stack content items vertically on tablet/mobile */
-    section:nth-child(3) figure > div {
+    /* Education/Work Section: Stack content items vertically on tablet/mobile */
+    section:nth-child(3) figure > div, #work-experience figure > div {
         flex-direction: column;
         align-items: flex-start;
         gap: 15px;
@@ -437,9 +436,15 @@ footer figure:last-child div:last-child a:hover {
         flex-direction: column;
         text-align: center;
         gap: 20px;
+        align-items: center; /* Center items when stacked */
     }
     footer figure:last-child div {
         width: 100%;
+    }
+    footer figure:last-child div:first-child,
+    footer figure:last-child div:nth-child(2),
+    footer figure:last-child div:last-child {
+        text-align: center; /* Center text inside the stacked divs */
     }
 }
 
@@ -459,7 +464,7 @@ footer figure:last-child div:last-child a:hover {
         padding: 15px 5%;
     }
 
-    /* FIX APPLIED: Ensure Nav Links flow horizontally and wrap */
+    /* Ensure Nav Links stack or wrap nicely */
     nav > div:last-child {
         display: flex;
         flex-wrap: wrap;
@@ -468,10 +473,9 @@ footer figure:last-child div:last-child a:hover {
     }
 
     nav > div:last-child a {
-        /* Reduced margin to allow more links per line */
         margin-left: 0;
         margin-right: 15px;
-        margin-bottom: 5px; /* Space between wrapped links */
+        margin-bottom: 5px;
         font-size: 1em;
     }
 
@@ -484,14 +488,19 @@ footer figure:last-child div:last-child a:hover {
     section:nth-child(1) article > div:first-child > div:last-child h1 {
         font-size: 3em;
     }
+
+    /* Skills Section: Force 2 columns for better spacing */
+    section:nth-child(2) article {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
 }
 
 
 /* Mobile Medium (Max 375px) */
 @media (max-width: 375px) {
-    /* Skills Section: Adjust grid to allow for better fit */
+    /* Skills Section: Still 2 columns, adjust gap */
     section:nth-child(2) article {
-        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
         gap: 10px;
     }
 
@@ -519,13 +528,13 @@ footer figure:last-child div:last-child a:hover {
 
     /* Navigation: Make nav links even smaller to fit */
     nav > div:last-child a {
-        /* This rule now inherits from 425px, just making text smaller */
         font-size: 0.9em;
     }
 
-    /* Skills: Ensure skills are still readable, force 2 per row */
+    /* 🔥 CRITICAL FIX: Ensure skills are still readable, keep 2 per row, but reduce size */
     section:nth-child(2) article {
         grid-template-columns: repeat(2, 1fr);
+        gap: 5px;
     }
 
     /* Footer */

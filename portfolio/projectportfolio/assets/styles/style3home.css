@@ -6,7 +6,10 @@
     --text-faded: #8b949e;
 }
 
-* {
+/* 🔥 IMPROVEMENT: Inherit box-sizing for pseudo-elements */
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -81,7 +84,6 @@ main>section:nth-child(1) {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    /* Added for better layout */
     gap: 40px;
     padding-top: 80px;
     padding-bottom: 80px;
@@ -112,7 +114,6 @@ main>section:nth-child(1) p {
 }
 
 main>section:nth-child(1) img {
-    /* ** UPDATED ** Increased size from 250px to 350px */
     width: 350px;
     height: 350px;
     object-fit: cover;
@@ -197,7 +198,6 @@ main>section:nth-child(2) figure:hover {
 }
 
 main>section:nth-child(2) figure img {
-    /* ** UPDATED ** Increased size from 60px to 70px */
     width: 70px;
     height: 70px;
     border-radius: 50%;
@@ -220,9 +220,7 @@ main>section:nth-child(2) figure a {
     font-size: 0.9em;
 }
 
-/*
-home section 3 styles (Projects/Gallery)
- */
+/* home section 3 styles (Projects/Gallery) */
 main>section:nth-child(3) article:first-child {
     text-align: center;
     margin-bottom: 40px;
@@ -297,7 +295,6 @@ main>section:nth-child(3) figure a:hover {
 }
 
 main>section:nth-child(3) figure img {
-    /* ** UPDATED ** Increased height from 200px to 250px */
     width: 100%;
     height: 250px;
     object-fit: cover;
@@ -314,19 +311,33 @@ main>section:nth-child(3) figure>div:last-child p {
     font-weight: bold;
 }
 
-/*assignment end*/
-
-main>section:nth-child(4)>p {
-    /* The ASSIGNMENT header */
+/*assignment section header */
+main>section:nth-child(4) .assignment-header-article {
     text-align: center;
+    margin-bottom: 40px;
+}
+
+main>section:nth-child(4) .assignment-header-article p:first-child {
     color: var(--primary-color);
     text-transform: uppercase;
     letter-spacing: 2px;
     font-weight: bold;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 
-main>section:nth-child(4) article {
+main>section:nth-child(4) .assignment-header-article h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+main>section:nth-child(4) .assignment-header-article div:last-child {
+    max-width: 700px;
+    margin: 0 auto;
+    color: var(--text-faded);
+}
+
+/* assignment figures */
+main>section:nth-child(4) .assignment-figures {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
@@ -366,7 +377,7 @@ main>section:nth-child(4) figure a {
     margin-top: 10px;
 }
 
-main>section:nth-child(4) figure>div {
+main>section:nth-child(4) figure>div:last-child {
     color: var(--primary-color);
     font-size: 0.9em;
     margin-top: 10px;
@@ -404,8 +415,8 @@ footer article>figure:last-child {
     justify-content: space-between;
     align-items: center;
     padding-top: 30px;
-    flex-wrap: wrap; /* Added for responsiveness */
-    gap: 20px; /* Added for spacing on smaller screens */
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 footer figure:last-child p {
@@ -420,33 +431,22 @@ footer figure:last-child div:first-child p:first-child {
     font-size: 1em;
 }
 
-/* --- NEW CODE TO MAKE GMAIL GREEN --- */
+/* Email Styling */
 footer figure:last-child div:nth-child(2) {
-    /* Target the email address text */
     color: var(--primary-color);
-    /* Apply the signature green color */
     font-weight: bold;
-    /* Make it bold to stand out more */
     font-size: 1.1em;
-    /* Make it slightly larger */
     transition: color 0.3s;
 }
 
-/* Optional: A subtle hover effect */
 footer figure:last-child div:nth-child(2):hover {
     color: var(--secondary-color);
-    /* Change to white on hover */
     cursor: pointer;
 }
-/* ----------------------------------- */
-
-
-/* NEW STYLES FOR GREEN CONTACT BUTTON */
+/* Contact Button Styling */
 footer figure:last-child div:last-child a {
-    /* Style the 'CONTACT' anchor tag to look like a button */
     background-color: var(--primary-color);
     color: var(--background-dark);
-    /* Dark text on green background */
     border: none;
     padding: 10px 20px;
     cursor: pointer;
@@ -456,94 +456,28 @@ footer figure:last-child div:last-child a {
     text-transform: uppercase;
     font-size: 1em;
     text-decoration: none;
-    /* Remove underline */
     display: inline-block;
-    /* Essential for padding/sizing */
 }
 
-/* Optional: Add hover effect to the new button style */
 footer figure:last-child div:last-child a:hover {
     opacity: 0.9;
     color: var(--background-dark);
-    /* Ensure text stays dark on hover */
 }
 
-/* Remove conflicting styles from the parent div, as the button's appearance is now handled by the <a> tag. */
 footer figure:last-child div:last-child {
     color: initial;
     font-weight: initial;
     font-size: initial;
 }
 
-/* Responsive adjustments for smaller screens (Existing in the base block) */
-@media (max-width: 900px) {
-    main>section:nth-child(1) {
-        flex-direction: column-reverse; /* Put text above image on small screens */
-        text-align: center;
-    }
+/* --- MEDIA QUERIES --- */
 
-    main>section:nth-child(1) article:last-child {
-        justify-content: center; /* Center the image */
-    }
-
-    main>section:nth-child(2) figure,
-    main>section:nth-child(3) figure {
-        width: calc(50% - 15px); /* Two columns on smaller screens */
-    }
-
-    footer article>figure:last-child {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    footer figure:last-child div:nth-child(2),
-    footer figure:last-child div:last-child {
-        margin-top: 10px; /* Add spacing between footer elements */
-    }
-}
-
-@media (max-width: 600px) {
-    nav {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    nav>div:last-child a {
-        margin-left: 15px;
-        margin-right: 15px;
-    }
-
-    main>section:nth-child(1) h1 {
-        font-size: 2.5em;
-    }
-
-    main>section:nth-child(1) img {
-        width: 280px; /* Slightly smaller on very small screens */
-        height: 280px;
-    }
-
-    main>section:nth-child(2) figure,
-    main>section:nth-child(3) figure {
-        width: 100%; /* Single column on very small screens */
-        min-width: unset;
-    }
-
-    footer h3 {
-        font-size: 2em;
-    }
-}
-
-/*
- 7. MEDIA QUERIES (ENHANCED RESPONSIVENESS)
- (This is the detailed set of new media queries)
-*/
-
-/* Laptop Large (Max 1440px) - Handled well by base styles, but for consistency. */
+/* Laptop Large (Max 1440px) - ADDED */
 @media (max-width: 1440px) {
-    /* No major layout changes needed */
+    /* No major layout changes needed yet, often used for subtle adjustments */
 }
 
-/* Laptop (Max 1024px) */
+/* Laptop (Max 1024px) - ADDED */
 @media (max-width: 1024px) {
     section {
         padding: 40px 6%;
@@ -553,51 +487,59 @@ footer figure:last-child div:last-child {
     }
 }
 
-/* Tablet (Max 768px) - Stacking main content */
-@media (max-width: 768px) {
-    /* About Section: Stack image and text */
+/* Tablet (Max 900px) */
+@media (max-width: 900px) {
     main>section:nth-child(1) {
-        /* Overrides the 900px rule for flex direction to apply specific tablet spacing */
         flex-direction: column-reverse;
         text-align: center;
-        gap: 30px;
     }
 
-    /* FIX APPLIED: Adjusted photo size for tablet view */
+    main>section:nth-child(1) article:last-child {
+        justify-content: center;
+    }
+
+    main>section:nth-child(2) figure,
+    main>section:nth-child(3) figure,
+    main>section:nth-child(4) .assignment-figures figure {
+        width: calc(50% - 15px);
+    }
+
+    footer article>figure:last-child {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    footer figure:last-child div:nth-child(2),
+    footer figure:last-child div:last-child {
+        margin-top: 10px;
+    }
+}
+
+/* Tablet (Max 768px) */
+@media (max-width: 768px) {
+    main>section:nth-child(1) article:first-child h1 {
+        font-size: 2.8em;
+    }
+
     main>section:nth-child(1) article:last-child img {
         width: 250px;
         height: 250px;
     }
 
-    main>section:nth-child(1) article:first-child h1 {
-        font-size: 3.5em;
-    }
-
-    /* About Section: Ensure body text is readable (This target seems general, reviewing to match new structure) */
-    main>section:nth-child(1) article:first-child p {
-        text-align: center;
-        max-width: 100%;
-    }
-
-    /* Services Section: Adjust figure width to 2 columns */
     main>section:nth-child(2) figure,
-    main>section:nth-child(3) figure {
+    main>section:nth-child(3) figure,
+    main>section:nth-child(4) .assignment-figures figure {
         width: calc(50% - 15px);
     }
 
-    /* Footer: Stacked content (This rule is already largely covered by 900px/600px rules, but keeping for completeness) */
     footer article>figure:last-child {
-        flex-direction: column;
-        text-align: center;
-        gap: 20px;
-        align-items: center; /* Center items for a stacked footer look */
+        align-items: center;
     }
 }
 
 
-/* Mobile Large (Max 425px) - Stacked navigation, smaller padding */
+/* Mobile Large (Max 425px) - Single column layout */
 @media (max-width: 425px) {
-    /* Reset section padding for smaller screens */
     section {
         padding: 30px 5%;
     }
@@ -610,7 +552,6 @@ footer figure:last-child div:last-child {
         padding: 15px 5%;
     }
 
-    /* FIX APPLIED: Ensure Nav Links flow horizontally and wrap */
     nav > div:last-child {
         display: flex;
         flex-wrap: wrap;
@@ -619,10 +560,9 @@ footer figure:last-child div:last-child {
     }
 
     nav > div:last-child a {
-        /* Reduced margin to allow more links per line */
         margin-left: 0;
         margin-right: 15px;
-        margin-bottom: 5px; /* Space between wrapped links */
+        margin-bottom: 5px;
         font-size: 1em;
     }
 
@@ -633,48 +573,46 @@ footer figure:last-child div:last-child {
     }
 
     main>section:nth-child(1) article:first-child h1 {
-        font-size: 3em;
+        font-size: 2.2em;
     }
 
-    /* Services/Projects: Single column on mobile */
+    /* Services/Projects/Assignments: Single column on mobile */
     main>section:nth-child(2) figure,
-    main>section:nth-child(3) figure {
+    main>section:nth-child(3) figure,
+    main>section:nth-child(4) .assignment-figures figure {
         width: 100%;
         min-width: unset;
+    }
+
+    footer h3 {
+        font-size: 2em;
     }
 }
 
 
 /* Mobile Medium (Max 375px) */
 @media (max-width: 375px) {
-    /* Skills Section: Adjust grid to allow for better fit */
-    main>section:nth-child(4) article {
-        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-        gap: 10px;
+    /* Skills Section: Force single column on smaller phones for max content width */
+    main>section:nth-child(4) .assignment-figures {
+        grid-template-columns: 1fr;
+        gap: 15px;
     }
 
-    /* Footer header reduction */
     footer h3 {
         font-size: 1.8em;
     }
 }
 
 
-/* Mobile Small (Max 320px) - Smallest common screen size */
+/* Mobile Small (Max 320px) */
 @media (max-width: 320px) {
     /* Main H1 - Reduce overall size for readability */
     h1 {
-        font-size: 2.2em;
+        font-size: 2em;
     }
 
     /* Navigation: Make nav links even smaller to fit */
     nav > div:last-child a {
-        /* This rule now inherits from 425px, just making text smaller */
         font-size: 0.9em;
-    }
-
-    /* Skills: Ensure skills are still readable, force 2 per row */
-    main>section:nth-child(4) article {
-        grid-template-columns: repeat(2, 1fr);
     }
 }

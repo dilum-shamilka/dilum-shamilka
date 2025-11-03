@@ -40,13 +40,15 @@ nav > div:first-child {
     line-height: 1.2;
 }
 
-nav > div:first-child a:first-child {
+/* FIX: Targets the DILUM link (h1 > a) */
+nav > div:first-child h1 a {
     font-size: 1.8em;
     font-weight: bold;
     color: var(--primary-color);
     text-decoration: none;
 }
 
+/* 🔥 FIX: Targets the DEVELOPER/DESIGNR link (the second <a> in the first div) */
 nav > div:first-child a:last-child {
     font-size: 0.8em;
     color: var(--primary-color);
@@ -86,21 +88,15 @@ section:nth-child(2) img {
     border-radius: 50%;
     margin: 0 15px;
     cursor: pointer;
-
-    /* Set the background to green (primary color) */
     background-color: var(--primary-color);
     border: none;
-
     transition: transform 0.3s, opacity 0.3s, box-shadow 0.3s;
-
-    /* Invert filter to make the icon image itself white */
     filter: invert(1);
 }
 
 section:nth-child(2) img:hover {
     transform: scale(1.1);
     opacity: 1;
-    /* Maintains the green glow highlight on hover */
     box-shadow: 0 0 15px rgba(0, 176, 141, 0.8), 0 0 5px var(--primary-color);
 }
 
@@ -112,42 +108,36 @@ section:nth-child(3) article {
     background-color: var(--background-dark);
 }
 
-
-section:nth-child(3) article figure:first-child {
+/* Contact Form */
+section:nth-child(3) article figure.contact-form {
     flex: 2;
     background-color: var(--card-background);
     padding: 40px;
     border-radius: 8px;
     display: flex;
     flex-direction: column;
-    /* FIX: Center the text "make something amazing" */
     text-align: center;
 }
 
-section:nth-child(3) article figure:first-child a {
+section:nth-child(3) article figure.contact-form h2 {
     font-size: 2.5em;
     color: var(--primary-color);
     font-weight: bold;
     margin-bottom: 30px;
-    text-decoration: none;
     line-height: 1.2;
 }
 
-
-section:nth-child(3) article figure:first-child label {
-    /* FIX: Set to block display so text-align: left can work relative to the form width */
+section:nth-child(3) article figure.contact-form label {
     display: block;
     color: var(--secondary-color);
     font-weight: bold;
     margin-bottom: 5px;
     margin-top: 15px;
-    text-align: left; /* Aligns labels to the left */
+    text-align: left;
 }
 
-
-section:nth-child(3) article figure:first-child input[type="search"],
-section:nth-child(3) article figure:first-child textarea {
-    /* Changed input[type="search"] for the message box to a textarea in HTML below */
+section:nth-child(3) article figure.contact-form input:not([type="submit"]),
+section:nth-child(3) article figure.contact-form textarea {
     width: 100%;
     padding: 15px;
     margin-bottom: 20px;
@@ -157,22 +147,20 @@ section:nth-child(3) article figure:first-child textarea {
     border-radius: 5px;
     font-size: 1em;
     transition: border-color 0.3s;
-    resize: vertical; /* Allow resizing of the textarea */
+    resize: vertical;
 }
 
-section:nth-child(3) article figure:first-child input[type="search"]:focus,
-section:nth-child(3) article figure:first-child textarea:focus {
+section:nth-child(3) article figure.contact-form input:not([type="submit"]):focus,
+section:nth-child(3) article figure.contact-form textarea:focus {
     border-color: var(--primary-color);
     outline: none;
 }
 
-/* Replaced the complex nth-last-of-type selector with a clear textarea selector */
-section:nth-child(3) article figure:first-child textarea {
+section:nth-child(3) article figure.contact-form textarea {
     min-height: 100px;
 }
 
-
-section:nth-child(3) article figure:first-child input[type="button"] {
+section:nth-child(3) article figure.contact-form input[type="submit"] {
     background-color: var(--primary-color);
     color: var(--background-dark);
     border: none;
@@ -187,13 +175,12 @@ section:nth-child(3) article figure:first-child input[type="button"] {
     width: 100%;
 }
 
-section:nth-child(3) article figure:first-child input[type="button"]:hover {
+section:nth-child(3) article figure.contact-form input[type="submit"]:hover {
     opacity: 0.9;
 }
 
-
-
-section:nth-child(3) article figure:last-child {
+/* Contact Info */
+section:nth-child(3) article figure.contact-info {
     flex: 1;
     background-color: var(--card-background);
     padding: 40px;
@@ -202,23 +189,28 @@ section:nth-child(3) article figure:last-child {
     line-height: 1.8;
 }
 
+section:nth-child(3) article figure.contact-info .info-group {
+    margin-bottom: 25px;
+}
+section:nth-child(3) article figure.contact-info .info-group:last-child {
+    margin-bottom: 0;
+}
 
-section:nth-child(3) article figure:last-child p:nth-child(odd) {
-
+section:nth-child(3) article figure.contact-info .info-title {
     font-family: 'Courier New', monospace;
     color: var(--secondary-color);
     font-weight: bold;
     font-size: 1.2em;
-    margin-top: 15px;
+    margin-top: 0;
     margin-bottom: 5px;
     text-transform: uppercase;
 }
 
-
-section:nth-child(3) article figure:last-child p:nth-child(even) {
+section:nth-child(3) article figure.contact-info .info-detail {
     color: var(--text-faded);
     font-size: 1em;
 }
+
 
 /*footer*/
 footer {
@@ -234,14 +226,11 @@ footer hr {
     background-color: var(--card-background);
 }
 
-
 footer article > figure:first-child {
     text-align: center;
     padding: 40px 0;
     position: relative;
-
 }
-
 
 footer article > figure:first-child::before,
 footer article > figure:first-child::after {
@@ -297,6 +286,8 @@ footer figure:last-child div:nth-child(2) {
 }
 
 /*responsive*/
+
+/* Laptop (Max 1440px) */
 @media (max-width: 1440px) {
     /* No major changes */
 }
@@ -319,8 +310,8 @@ footer figure:last-child div:nth-child(2) {
         gap: 30px;
     }
 
-    section:nth-child(3) article figure:last-child {
-        /* Move green line from left to top when stacked */
+    /* Move green line from left to top when stacked */
+    section:nth-child(3) article figure.contact-info {
         border-left: none;
         border-top: 5px solid var(--primary-color);
     }
@@ -342,14 +333,6 @@ footer figure:last-child div:nth-child(2) {
         padding: 30px 5%;
     }
 
-    /* FIX: Mobile Nav Stacking */
-    nav > div:last-child {
-        display: flex; /* Makes the container a flex box */
-        flex-direction: column; /* Stacks the links vertically */
-        align-items: flex-start; /* Aligns the links to the left */
-        width: 100%; /* Ensures the link container uses full width */
-    }
-
     /* Navigation Bar: Stacked items */
     nav {
         flex-direction: column;
@@ -358,11 +341,19 @@ footer figure:last-child div:nth-child(2) {
         padding: 15px 5%;
     }
 
+    /* Nav Links Stacking */
+    nav > div:last-child {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
     nav > div:last-child a {
-        margin-left: 0; /* FIX: Reset horizontal margin for stacking */
+        margin-left: 0; /* Reset horizontal margin for stacking */
         margin-top: 5px; /* Add vertical spacing between links */
-        padding: 5px 0; /* Add padding for better touch targets */
-        font-size: 1em; /* Slight reduction for space */
+        padding: 5px 0;
+        font-size: 1em;
     }
 
     /* Social Media Icons: Reduce size slightly */
@@ -377,7 +368,7 @@ footer figure:last-child div:nth-child(2) {
         padding: 30px 20px;
     }
 
-    section:nth-child(3) article figure:first-child a {
+    section:nth-child(3) article figure.contact-form h2 {
         font-size: 2em;
     }
 }
@@ -391,10 +382,10 @@ footer figure:last-child div:nth-child(2) {
     }
 
     /* Contact Info Block: Reduce font size for dense content */
-    section:nth-child(3) article figure:last-child p:nth-child(odd) {
+    section:nth-child(3) article figure.contact-info .info-title {
         font-size: 1.1em;
     }
-    section:nth-child(3) article figure:last-child p:nth-child(even) {
+    section:nth-child(3) article figure.contact-info .info-detail {
         font-size: 0.9em;
     }
 }
@@ -402,17 +393,15 @@ footer figure:last-child div:nth-child(2) {
 
 /* Mobile Small (Max 320px) */
 @media (max-width: 320px) {
-    /* Global Section H1 - If there was an h1 tag, it would be reduced here */
-    /* Assuming a missing H1 definition here, let's target the largest text in the footer */
     footer h3 {
         font-size: 2em;
     }
 
     /* Navigation: Further reduction in link size and spacing */
     nav > div:last-child a {
-        margin-left: 0; /* FIX: Reset to 0 to maintain vertical alignment */
+        margin-left: 0;
         font-size: 0.9em;
-        padding: 4px 0; /* Adjusted vertical padding */
+        padding: 4px 0;
     }
 
     /* Social Media Icons: Force smaller size for 320px screen */

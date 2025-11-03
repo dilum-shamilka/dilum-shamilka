@@ -3,7 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DILUM SHAMILKA - Contact</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/styles/style2contact.css">
 
     <style>
@@ -22,8 +24,6 @@
             opacity: 0;
             /* Define the smooth transition */
             transition: opacity 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-            /* Optimization hint */
-            will-change: opacity, transform;
         }
 
         /* 3. Final State: When the 'visible' class is added by JavaScript */
@@ -39,8 +39,8 @@
 <body>
 <nav>
     <div>
-        <a>DILUM</a>
-        <a>DEVELOPER/DESIGNR</a>
+        <h1><a href="home.html">DILUM</a></h1>
+        <a href="#">DEVELOPER/DESIGNR</a>
     </div>
     <div>
         <a href="home.html">Home</a>
@@ -51,65 +51,58 @@
 
 <section class="social-links-section reveal-element">
     <a href="https://www.facebook.com/profile.php?id=100081284394455&mibextid=wwXIfr&mibextid=wwXIfr">
-        <img src="assets/images/facebook.png" alt="Facebook">
+        <img src="assets/images/facebook.png" alt="Facebook icon link">
     </a>
     <a href="https://github.com/dilum-shamilka/My-Portfolio">
-        <img src="assets/images/github.png" alt="github">
+        <img src="assets/images/github.png" alt="GitHub icon link">
     </a>
     <a href="https://brand.linkedin.com/downloads">
-        <img src="assets/images/linkedin.png" alt="linkedin">
+        <img src="assets/images/linkedin.png" alt="LinkedIn icon link">
     </a>
     <a href="https://www.instagram.com/dilum_pahasara?igsh=eDEybjR3NGlsZjBw&utm_source=qr">
-        <img src="assets/images/Screenshot%202025-10-08%20013025.png" alt="instagram">
+        <img src="assets/images/Screenshot%202025-10-08%20013025.png" alt="Instagram icon link">
     </a>
 </section>
 
 <section class="reveal-element">
     <article>
-        <figure>
-            <a href="#">
+        <figure class="contact-form">
+            <h2>
                 Let’s Work Together !
-            </a>
+            </h2>
 
-            <label for="search1">Name:</label>
-            <input type="search" id="search1" placeholder="Enter your name">
+            <form action="#" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
 
-            <label for="search2">Email:</label>
-            <input type="search" id="search2" placeholder="Enter your email">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
 
-            <label for="search3">Company:</label>
-            <input type="search" id="search3" placeholder="Enter company name (optional)">
+                <label for="company">Company:</label>
+                <input type="text" id="company" name="company" placeholder="Enter company name (optional)">
 
-            <label for="search4">Project Details:</label>
-            <input type="search" id="search4" placeholder="Briefly describe your project">
+                <label for="project-details">Project Details:</label>
+                <textarea id="project-details" name="project-details" placeholder="Briefly describe your project" rows="5" required></textarea>
 
-            <input type="button" value="Send Inquiry">
+                <input type="submit" value="Send Inquiry">
+            </form>
         </figure>
-        <figure>
-            <p>
-                Address
-            </p>
-            <br>
-            <p>
-                63 mile post nuwaraeliya road welimada
-            </p>
-            <br>
-            <p>
-                call
-            </p>
-            <br>
-            <p>
-                +94728262003
-            </p>
-            <br>
-            <p>
-                Email me
-            </p>
-            <br>
-            <p>
-                dilumshamilka4@gmail.com
-            </p>
-            <br>
+
+        <figure class="contact-info">
+            <div class="info-group">
+                <p class="info-title">Address</p>
+                <p class="info-detail">63 mile post nuwaraeliya road welimada</p>
+            </div>
+
+            <div class="info-group">
+                <p class="info-title">Call</p>
+                <p class="info-detail">+94728262003</p>
+            </div>
+
+            <div class="info-group">
+                <p class="info-title">Email Me</p>
+                <p class="info-detail">dilumshamilka4@gmail.com</p>
+            </div>
         </figure>
     </article>
 </section>
@@ -138,32 +131,24 @@
 <script>
     document.addEventListener('DOMContentLoaded', () => {
         // 1. Initial Page Fade-in:
-        // Sets the body opacity to 1, triggering the CSS transition for a smooth page load.
         document.body.style.opacity = '1';
 
         // 2. Set up the Intersection Observer for all scroll-reveal elements
-        // Target all elements with the new standardized class 'reveal-element'
         const elementsToReveal = document.querySelectorAll('.reveal-element');
-
-        // Configuration for the Intersection Observer
         const observerOptions = {
-            // Trigger animation 100px before the bottom of the element hits the bottom of the viewport.
             rootMargin: '0px 0px -100px 0px',
-            threshold: 0.1 // Triggers when 10% of the element is visible
+            threshold: 0.1
         };
 
         const observer = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    // Add the 'visible' class to start the CSS transition (slide-down/fade-in)
                     entry.target.classList.add('visible');
-                    // Stop observing the element once it has been revealed
                     observer.unobserve(entry.target);
                 }
             });
         }, observerOptions);
 
-        // Start observing each element
         elementsToReveal.forEach(element => {
             observer.observe(element);
         });
