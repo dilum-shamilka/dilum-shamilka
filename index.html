@@ -12,27 +12,22 @@
     <link rel="stylesheet" href="portfolio/projectportfolio/assets/styles/style3index.css">
 
     <style>
-        /* 1. Initial State for Full Page Load:
-           Ensures content is hidden until the script loads, then smoothly fades in. */
+
         body {
             opacity: 0;
-            transition: opacity 1s ease-in; /* Controls the speed of the full-page fade-in */
+            transition: opacity 1s ease-in;
         }
 
-        /* 2. State for elements that will be revealed on scroll (Hidden/Initial state) */
         .reveal-section {
-            /* Initial state: slightly scaled down and fully transparent */
             transform: scale(0.95);
             opacity: 0;
-            /* Transition properties: use 'all' for a smooth scale and fade transition */
             transition: all 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-            will-change: opacity, transform; /* Optimization hint */
+            will-change: opacity, transform;
         }
 
-        /* 3. Final State: When the 'visible' class is added by JavaScript */
         .reveal-section.visible {
-            transform: scale(1); /* Return to original size */
-            opacity: 1; /* Fade to visible */
+            transform: scale(1);
+            opacity: 1;
         }
     </style>
 </head>
@@ -308,34 +303,22 @@
 </main>
 <script>
     document.addEventListener('DOMContentLoaded', () => {
-        // 1. Initial Page Fade-in:
-        // Sets the body opacity to 1, triggering the CSS transition for a smooth page load.
         document.body.style.opacity = '1';
-
-        // 2. Setup the Intersection Observer for all scroll-reveal sections
         const sectionsToReveal = document.querySelectorAll('.reveal-section');
-
-        // Configuration for the Intersection Observer
         const observerOptions = {
-            // Trigger animation 150px before the bottom of the section hits the bottom of the viewport.
             rootMargin: '0px 0px -150px 0px',
-            threshold: 0.05 // Triggers when 5% of the element is visible
+            threshold: 0.05
         };
 
         const observer = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
-                // Check if the section is currently intersecting (i.e., visible in the viewport)
-                if (entry.isIntersecting) {
-                    // Add the 'visible' class to start the CSS transition (scale-up and fade-in)
-                    entry.target.classList.add('visible');
 
-                    // Stop observing the element once it has been revealed
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
                     observer.unobserve(entry.target);
                 }
             });
         }, observerOptions);
-
-        // Start observing each section
         sectionsToReveal.forEach(section => {
             observer.observe(section);
         });

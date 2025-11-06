@@ -9,28 +9,21 @@
     <link rel="stylesheet" href="assets/styles/style2contact.css">
 
     <style>
-        /* 1. Initial State for Full Page Load:
-           Ensures content is hidden until the script loads, then smoothly fades in. */
         body {
             opacity: 0;
-            transition: opacity 1s ease-in; /* Controls the speed of the full-page fade-in */
+            transition: opacity 1s ease-in;
         }
 
-        /* 2. Initial state for all revealed elements (SLIDE-DOWN from the TOP and fade) */
         .reveal-element {
-            /* Initial position: 30px ABOVE its final spot */
+
             transform: translateY(-30px);
-            /* Starts hidden */
             opacity: 0;
-            /* Define the smooth transition */
+
             transition: opacity 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
 
-        /* 3. Final State: When the 'visible' class is added by JavaScript */
         .reveal-element.visible {
-            /* Final position: back to normal (0 offset) */
             transform: translateY(0);
-            /* Fully visible */
             opacity: 1;
         }
     </style>
@@ -130,10 +123,8 @@
 </footer>
 <script>
     document.addEventListener('DOMContentLoaded', () => {
-        // 1. Initial Page Fade-in:
         document.body.style.opacity = '1';
 
-        // 2. Set up the Intersection Observer for all scroll-reveal elements
         const elementsToReveal = document.querySelectorAll('.reveal-element');
         const observerOptions = {
             rootMargin: '0px 0px -100px 0px',
