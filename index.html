@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Dilum Shamilka Portfolio">
+    <meta name="description" content="Portfolio website of Dilum Shamilka showcasing skills, projects, and educations.">
+    <meta name="keywords" content="Dilum, Portfolio, Developer, Skills, Projects, Education">
+    <meta name="author" content="Dilum Shamilka">
+    <title>Dilum Shamilka</title>
+    <link rel="stylesheet" href="portfolio/projectportfolio/assets/styles/style3index.css">
+
+    <style>
+        /* 1. Initial State for Full Page Load:
+           Ensures content is hidden until the script loads, then smoothly fades in. */
+        body {
+            opacity: 0;
+            transition: opacity 1s ease-in; /* Controls the speed of the full-page fade-in */
+        }
+
+        /* 2. State for elements that will be revealed on scroll (Hidden/Initial state) */
+        .reveal-section {
+            /* Initial state: slightly scaled down and fully transparent */
+            transform: scale(0.95);
+            opacity: 0;
+            /* Transition properties: use 'all' for a smooth scale and fade transition */
+            transition: all 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            will-change: opacity, transform; /* Optimization hint */
+        }
+
+        /* 3. Final State: When the 'visible' class is added by JavaScript */
+        .reveal-section.visible {
+            transform: scale(1); /* Return to original size */
+            opacity: 1; /* Fade to visible */
+        }
+    </style>
+</head>
+
+<body>
+<nav>
+    <div>
+        <a href="#">Dilum</a>
+        <a href="#">DEVELOPER/DESIGNR</a>
+    </div>
+    <div>
+        <a href="index.html">Home</a>
+        <a href="portfolio/projectportfolio/about.html">About</a>
+        <a href="portfolio/projectportfolio/contact.html">Contact</a>
+    </div>
+</nav>
+<main>
+    <section class="reveal-section">
+        <article>
+            <div>
+                <h1>HELLO I'M Dilum</h1>
+            </div>
+            <div>
+                <p>
+                    I am a Software Engineering student who loves building websites and modern web applications.
+                    My focus is on creating user-friendly designs and improving user experiences.
+
+                    Currently, I am learning and working on improving my skills to build better and innovative
+                    solutions.
+                </p>
+            </div>
+            <div>
+                <input type="button" value="Contact" onclick="location.href='contact.html'">
+                <input type="button" value="CV">
+            </div>
+        </article>
+        <article>
+            <div>
+                <img src="portfolio/projectportfolio/assets/images/WhatsApp%20Image%202025-10-06%20at%2010.27.30.jpeg" alt="Dilum Shamilka profile photo">
+            </div>
+        </article>
+    </section>
+
+    <section class="reveal-section">
+        <article>
+            <p>
+                ACTIVITIES
+            </p>
+            <div>
+                <h1>
+                    WHAT I DO?
+                </h1>
+            </div>
+            <div>
+                I design and develop websites, desktop applications, and modern web applications.
+                My skills include web design, UI/UX design,
+                and creating user-friendly, innovative solutions.
+            </div>
+        </article>
+        <article>
+            <figure>
+                <div>
+                    <img src="portfolio/projectportfolio/assets/images/online-interview.png" alt="Icon representing website development">
+                </div>
+                <div>
+                    <p>
+                        websites develop
+                    </p>
+                    <a>
+                        I can Develop for you a
+                        website and i can upload
+                        them
+                    </a>
+                </div>
+            </figure>
+
+            <figure>
+                <div>
+                    <img src="portfolio/projectportfolio/assets/images/web-button.png" alt="Icon representing a desktop application">
+                </div>
+                <div>
+                    <p>
+                        Desktop app
+                    </p>
+                    <a>
+                        I can Develop for you
+                        desktop app
+                    </a>
+                </div>
+            </figure>
+
+            <figure>
+                <div>
+                    <img src="portfolio/projectportfolio/assets/images/online-interview.png" alt="Icon representing UI/UX design">
+                </div>
+                <div>
+                    <p>
+                        UI/UX Design
+                    </p>
+
+                    <a>
+                        I can design for you a
+                        website and
+                        desktop app
+                    </a>
+                </div>
+            </figure>
+
+        </article>
+    </section>
+
+    <section class="reveal-section">
+        <article>
+            <p>
+                GALLERY
+            </p>
+            <div>
+                <h1>
+                    WHAT I HAVE DONE?
+                </h1>
+            </div>
+            <div>
+                I have worked on designing and developing websites, creating desktop applications, and focusing on
+                UI/UX design.
+                My projects include building user-friendly interfaces and functional solutions to enhance user
+                experiences.
+            </div>
+        </article>
+        <article>
+            <figure>
+
+                <div>
+                    <p class="project-title">
+                        PROJECT 1
+                    </p>
+
+                    <P>Detail</P>
+                    <P>Detail</P>
+                    <P>Detail</P>
+                    <a href="https://github.com/dilum-shamilka/Elite-driving-school">see more -></a>
+                    <div>
+                        <img src="portfolio/projectportfolio/assets/images/best-coding-language-for-games.jpg" alt="Image showcasing Project 1, an Elite driving school system">
+                    </div>
+
+                    <div>
+                        <p>PROJECT 1</p>
+                    </div>
+                </div>
+
+            </figure>
+
+            <figure>
+                <div>
+                    <p class="project-title">
+                        PROJECT 2
+                    </p>
+
+                    <P>Detail</P>
+                    <P>Detail</P>
+                    <P>Detail</P>
+                    <a href="https://github.com/dilum-shamilka/ijse-first-sem-final">see more -></a>
+                    <div>
+                        <img src="portfolio/projectportfolio/assets/images/best-coding-language-for-games.jpg" alt="Image showcasing Project 2, a first semester final project">
+                    </div>
+                    <div>
+                        <p>PROJECT 2</p>
+                    </div>
+                </div>
+
+            </figure>
+
+            <figure>
+                <div>
+                    <p class="project-title">
+                        PROJECT 3
+                    </p>
+
+                    <P>Detail</P>
+                    <P>Detail</P>
+                    <P>Detail</P>
+                    <a href="https://github.com/dilum-shamilka/My-Portfolio">see more -></a>
+                    <div>
+                        <img src="portfolio/projectportfolio/assets/images/best-coding-language-for-games.jpg" alt="Image showcasing Project 3, the My Portfolio website">
+                    </div>
+                    <div>
+                        <p>PROJECT 3</p>
+                    </div>
+                </div>
+
+            </figure>
+        </article>
+
+    </section>
+
+    <section class="reveal-section">
+        <article class="assignment-header-article">
+            <p>
+                ASSIGNMENTS
+            </p>
+            <div>
+                <h1>
+                    MY LEARNINGS
+                </h1>
+            </div>
+            <div>
+                A collection of smaller assignments demonstrating skill in HTML, CSS, and Git.
+            </div>
+        </article>
+        <article class="assignment-figures">
+            <figure>
+                <div>
+                    <p> ASSIGNMET 1</p>
+                    <p> Topic: Advanced CSS Layouts</p>
+                    <p> Focus: Flexbox & Grid Mastery </p>
+                    <p> Outcome:Responsive Design Implementation</p>
+                    <a href="https://github.com/dilum-shamilka/CssShamilka">see more -></a>
+                    <div>
+                        ASSIGNMENT 1
+                    </div>
+                </div>
+            </figure>
+
+            <figure>
+                <div>
+                    <p> ASSIGNMET 2</p>
+                    <p> Topic: Git & GitHub Basics</p>
+                    <p> Focus: Cloning, Committing, Pushing </p>
+                    <p> Outcome: Version Control Setup</p>
+                    <a href="https://github.com/dilum-shamilka/webgithub-learn">see more -></a>
+                    <div>
+                        ASSIGNMENT 2
+                    </div>
+                </div>
+            </figure>
+
+            <figure>
+                <div>
+                    <p> ASSIGNMET 3</p>
+                    <p> Topic: Semantic HTML Structure</p>
+                    <p> Focus: Proper Tag Usage (Header, Main, Footer) </p>
+                    <p> Outcome: Accessible & Well-Formed Document</p>
+                    <a href="https://github.com/dilum-shamilka/CssShamilka.git">see more -></a>
+                    <div>
+                        ASSIGNMENT 3
+                    </div>
+                </div>
+            </figure>
+        </article>
+    </section>
+
+    <footer class="reveal-section">
+        <article>
+            <figure>
+                <h3>
+                    Let's make something amazing!
+                </h3>
+            </figure>
+            <figure>
+                <div>
+                    <P>Dilum</P>
+                    <P>DEVELOPER/DESIGNER</P>
+                    <P>© [2025] All rights reserved Crafted with care by Dilum Powered by pahasara</P>
+                </div>
+                <div>
+                    dilumshamilka4@gmail.com
+                </div>
+                <div>
+                    <a href="portfolio/projectportfolio/contact.html">CONTACT</a>
+                </div>
+            </figure>
+        </article>
+    </footer>
+</main>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // 1. Initial Page Fade-in:
+        // Sets the body opacity to 1, triggering the CSS transition for a smooth page load.
+        document.body.style.opacity = '1';
+
+        // 2. Setup the Intersection Observer for all scroll-reveal sections
+        const sectionsToReveal = document.querySelectorAll('.reveal-section');
+
+        // Configuration for the Intersection Observer
+        const observerOptions = {
+            // Trigger animation 150px before the bottom of the section hits the bottom of the viewport.
+            rootMargin: '0px 0px -150px 0px',
+            threshold: 0.05 // Triggers when 5% of the element is visible
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                // Check if the section is currently intersecting (i.e., visible in the viewport)
+                if (entry.isIntersecting) {
+                    // Add the 'visible' class to start the CSS transition (scale-up and fade-in)
+                    entry.target.classList.add('visible');
+
+                    // Stop observing the element once it has been revealed
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // Start observing each section
+        sectionsToReveal.forEach(section => {
+            observer.observe(section);
+        });
+    });
+</script>
+</body>
+
+</html>
