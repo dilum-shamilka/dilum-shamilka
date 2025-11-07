@@ -249,9 +249,8 @@ section:nth-child(3) figure > div > div:first-child {
     border-radius: 50%;
     flex-shrink: 0;
 }
-/* Work Experience section content takes full width without a logo/icon */
+
 #work-experience figure > div {
-    /* If the inner structure of #work-experience is simplified, remove this */
     display: block;
 }
 #work-experience figure p {
@@ -337,7 +336,6 @@ footer article > figure:last-child {
     justify-content: space-between;
     align-items: center;
     padding-top: 30px;
-    /* Added flex-wrap for mobile stacking */
     flex-wrap: wrap;
     gap: 20px;
 }
@@ -395,7 +393,6 @@ footer figure:last-child div:last-child a:hover {
 
 /* Tablet (Max 768px) - Stacking main content */
 @media (max-width: 768px) {
-    /* About Section: Stack image and text */
     section:nth-child(1) article > div:first-child {
         flex-direction: column;
         text-align: center;
@@ -419,7 +416,6 @@ footer figure:last-child div:last-child a:hover {
 
     /* Skills Section: Adjust grid for tablets (more columns, smaller minimum) */
     section:nth-child(2) article {
-        /* Set to 3 columns to prevent too many small items */
         grid-template-columns: repeat(3, 1fr);
         gap: 15px;
     }
@@ -436,7 +432,7 @@ footer figure:last-child div:last-child a:hover {
         flex-direction: column;
         text-align: center;
         gap: 20px;
-        align-items: center; /* Center items when stacked */
+        align-items: center;
     }
     footer figure:last-child div {
         width: 100%;
@@ -444,14 +440,13 @@ footer figure:last-child div:last-child a:hover {
     footer figure:last-child div:first-child,
     footer figure:last-child div:nth-child(2),
     footer figure:last-child div:last-child {
-        text-align: center; /* Center text inside the stacked divs */
+        text-align: center;
     }
 }
 
 
 /* Mobile Large (Max 425px) - Stacked navigation, smaller padding */
 @media (max-width: 425px) {
-    /* Reset section padding for smaller screens */
     section {
         padding: 30px 5%;
     }
@@ -531,7 +526,6 @@ footer figure:last-child div:last-child a:hover {
         font-size: 0.9em;
     }
 
-    /* 🔥 CRITICAL FIX: Ensure skills are still readable, keep 2 per row, but reduce size */
     section:nth-child(2) article {
         grid-template-columns: repeat(2, 1fr);
         gap: 5px;

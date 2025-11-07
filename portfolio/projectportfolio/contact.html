@@ -26,6 +26,42 @@
             transform: translateY(0);
             opacity: 1;
         }
+
+        /* New CSS for the Photo Gallery (You'll need to move this to your style2contact.css for a cleaner project structure) */
+        .photo-gallery {
+            margin-top: 40px; /* Add some space above the gallery */
+            padding: 20px;
+            background-color: #f9f9f9; /* Light background to make it stand out */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .photo-gallery h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Responsive grid for photos */
+            gap: 15px;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .gallery-item img:hover {
+            transform: scale(1.05); /* Slight zoom on hover */
+            cursor: pointer;
+        }
+        /* End of new CSS */
     </style>
 </head>
 
@@ -98,6 +134,18 @@
             </div>
         </figure>
     </article>
+
+    <div class="photo-gallery reveal-element">
+        <h2>Galary</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item"><img src="assets/images/img.png" alt=" Sample 1"></div>
+            <div class="gallery-item"><img src="assets/images/img_3.png" alt=" Sample 2"></div>
+            <div class="gallery-item"><img src="assets/images/img_2.png" alt=" Sample 3"></div>
+            <div class="gallery-item"><img src="assets/images/img_5.png" alt=" Sample 4"></div>
+            <div class="gallery-item"><img src="assets/images/img_8.png" alt=" Sample 5"></div>
+            <div class="gallery-item"><img src="assets/images/img_9.png" alt=" Sample 6"></div>
+        </div>
+    </div>
 </section>
 
 <footer class="reveal-element">

@@ -6,6 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="d839429b-8464-486a-8726-0152f4d134ca" name="Changes" comment="change">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/projectportfolio/assets/styles/style1about.css" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/projectportfolio/assets/styles/style1about.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/projectportfolio/assets/styles/style2contact.css" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/projectportfolio/assets/styles/style2contact.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/projectportfolio/assets/styles/style3index.css" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/projectportfolio/assets/styles/style3index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/projectportfolio/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/projectportfolio/contact.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,15 +117,7 @@
       <workItem from="1762413365762" duration="366000" />
       <workItem from="1762434815744" duration="595000" />
       <workItem from="1762440597250" duration="317000" />
-      <workItem from="1762457661330" duration="735000" />
-    </task>
-    <task id="LOCAL-00008" summary="add skill in about page">
-      <option name="closed" value="true" />
-      <created>1761227585153</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1761227585153</updated>
+      <workItem from="1762457661330" duration="5029000" />
     </task>
     <task id="LOCAL-00009" summary="add education section add">
       <option name="closed" value="true" />
@@ -506,7 +503,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762411498909</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="change">
+      <option name="closed" value="true" />
+      <created>1762461535247</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1762461535247</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

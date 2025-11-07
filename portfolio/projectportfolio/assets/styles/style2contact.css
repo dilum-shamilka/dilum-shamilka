@@ -40,7 +40,7 @@ nav > div:first-child {
     line-height: 1.2;
 }
 
-/* FIX: Targets the DILUM link (h1 > a) */
+
 nav > div:first-child h1 a {
     font-size: 1.8em;
     font-weight: bold;
@@ -48,7 +48,6 @@ nav > div:first-child h1 a {
     text-decoration: none;
 }
 
-/* 🔥 FIX: Targets the DEVELOPER/DESIGNR link (the second <a> in the first div) */
 nav > div:first-child a:last-child {
     font-size: 0.8em;
     color: var(--primary-color);
@@ -70,12 +69,11 @@ nav > div:last-child a:hover {
     color: var(--secondary-color);
 }
 
-/*social media */
 section:nth-child(2) {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: nowrap; /* Prevent wrapping unless necessary for small screens */
+    flex-wrap: nowrap;
     padding-top: 50px;
     padding-bottom: 50px;
     border-bottom: 1px solid var(--card-background);
@@ -304,7 +302,7 @@ footer figure:last-child div:nth-child(2) {
 
 /* Tablet (Max 768px) */
 @media (max-width: 768px) {
-    /* Contact Section: Stack columns vertically */
+
     section:nth-child(3) article {
         flex-direction: column;
         gap: 30px;
@@ -323,7 +321,7 @@ footer figure:last-child div:nth-child(2) {
         gap: 20px;
     }
     footer figure:last-child div {
-        width: 100%; /* Ensure content takes full width */
+        width: 100%;
     }
 }
 
@@ -350,8 +348,8 @@ footer figure:last-child div:nth-child(2) {
     }
 
     nav > div:last-child a {
-        margin-left: 0; /* Reset horizontal margin for stacking */
-        margin-top: 5px; /* Add vertical spacing between links */
+        margin-left: 0;
+        margin-top: 5px;
         padding: 5px 0;
         font-size: 1em;
     }
@@ -376,12 +374,10 @@ footer figure:last-child div:nth-child(2) {
 
 /* Mobile Medium (Max 375px) */
 @media (max-width: 375px) {
-    /* Social Media: Allow icons to wrap if they are too many */
     section:nth-child(2) {
         flex-wrap: wrap;
     }
 
-    /* Contact Info Block: Reduce font size for dense content */
     section:nth-child(3) article figure.contact-info .info-title {
         font-size: 1.1em;
     }
@@ -397,14 +393,12 @@ footer figure:last-child div:nth-child(2) {
         font-size: 2em;
     }
 
-    /* Navigation: Further reduction in link size and spacing */
     nav > div:last-child a {
         margin-left: 0;
         font-size: 0.9em;
         padding: 4px 0;
     }
 
-    /* Social Media Icons: Force smaller size for 320px screen */
     section:nth-child(2) img {
         width: 40px;
         height: 40px;

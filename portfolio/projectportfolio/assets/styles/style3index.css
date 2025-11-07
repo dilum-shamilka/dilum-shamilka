@@ -6,7 +6,7 @@
     --text-faded: #8b949e;
 }
 
-/* 🔥 IMPROVEMENT: Inherit box-sizing for pseudo-elements */
+
 *,
 *::before,
 *::after {
