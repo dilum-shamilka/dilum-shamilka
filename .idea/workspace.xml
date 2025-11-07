@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d839429b-8464-486a-8726-0152f4d134ca" name="Changes" comment="change">
+    <list default="true" id="d839429b-8464-486a-8726-0152f4d134ca" name="Changes" comment="add images">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/projectportfolio/assets/styles/style1about.css" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/projectportfolio/assets/styles/style1about.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/portfolio/projectportfolio/assets/styles/style2contact.css" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/projectportfolio/assets/styles/style2contact.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/projectportfolio/assets/styles/style3index.css" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/projectportfolio/assets/styles/style3index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/portfolio/projectportfolio/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/projectportfolio/contact.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -117,23 +114,7 @@
       <workItem from="1762413365762" duration="366000" />
       <workItem from="1762434815744" duration="595000" />
       <workItem from="1762440597250" duration="317000" />
-      <workItem from="1762457661330" duration="5029000" />
-    </task>
-    <task id="LOCAL-00009" summary="add education section add">
-      <option name="closed" value="true" />
-      <created>1761228944486</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1761228944486</updated>
-    </task>
-    <task id="LOCAL-00010" summary="add experince section add">
-      <option name="closed" value="true" />
-      <created>1761229190882</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1761229190882</updated>
+      <workItem from="1762457661330" duration="6595000" />
     </task>
     <task id="LOCAL-00011" summary="add footer section add">
       <option name="closed" value="true" />
@@ -511,14 +492,29 @@
       <option name="project" value="LOCAL" />
       <updated>1762461535247</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="change">
+      <option name="closed" value="true" />
+      <created>1762525828555</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1762525828555</updated>
+    </task>
+    <task id="LOCAL-00059" summary="add images">
+      <option name="closed" value="true" />
+      <created>1762525850082</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1762525850082</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="navcss colouradd" />
     <MESSAGE value="introcss colouradd" />
     <MESSAGE value="home,projectcss colouradd" />
     <MESSAGE value="footerandcss colouradd,responcive" />
@@ -543,6 +539,7 @@
     <MESSAGE value="updates responsiveness" />
     <MESSAGE value="change structure" />
     <MESSAGE value="change" />
-    <option name="LAST_COMMIT_MESSAGE" value="change" />
+    <MESSAGE value="add images" />
+    <option name="LAST_COMMIT_MESSAGE" value="add images" />
   </component>
 </project>
