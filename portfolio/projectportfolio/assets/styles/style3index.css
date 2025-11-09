@@ -325,13 +325,13 @@ main>section:nth-child(4) .assignment-header-article p:first-child {
     margin-bottom: 10px;
 }
 
-/* --- MODIFICATION START: Reduced brightness for the H1 in the 4th section (MY LEARNINGS) --- */
+
 main>section:nth-child(4) .assignment-header-article h1 {
     font-size: 2.5em;
     margin-bottom: 20px;
-    color: var(--text-faded); /* Changed from default color to faded color */
+    color: var(--text-faded);
 }
-/* --- MODIFICATION END --- */
+
 
 main>section:nth-child(4) .assignment-header-article div:last-child {
     max-width: 700px;
@@ -477,10 +477,9 @@ footer figure:last-child div:last-child {
 
 /* Laptop Large (Max 1440px) - ADDED */
 @media (max-width: 1440px) {
-    /* No major layout changes needed yet, often used for subtle adjustments */
 }
 
-/* Laptop (Max 1024px) - ADDED */
+/* Laptop (Max 1024px) */
 @media (max-width: 1024px) {
     section {
         padding: 40px 6%;
@@ -547,7 +546,6 @@ footer figure:last-child div:last-child {
         padding: 30px 5%;
     }
 
-    /* Navigation Bar: Stacked items */
     nav {
         flex-direction: column;
         align-items: flex-start;
@@ -569,7 +567,6 @@ footer figure:last-child div:last-child {
         font-size: 1em;
     }
 
-    /* About Section: Smaller profile image, smaller name */
     main>section:nth-child(1) article:last-child img {
         width: 150px;
         height: 150px;
@@ -595,7 +592,7 @@ footer figure:last-child div:last-child {
 
 /* Mobile Medium (Max 375px) */
 @media (max-width: 375px) {
-    /* Skills Section: Force single column on smaller phones for max content width */
+
     main>section:nth-child(4) .assignment-figures {
         grid-template-columns: 1fr;
         gap: 15px;
@@ -609,12 +606,11 @@ footer figure:last-child div:last-child {
 
 /* Mobile Small (Max 320px) */
 @media (max-width: 320px) {
-    /* Main H1 - Reduce overall size for readability */
+
     h1 {
         font-size: 2em;
     }
 
-    /* Navigation: Make nav links even smaller to fit */
     nav > div:last-child a {
         font-size: 0.9em;
     }

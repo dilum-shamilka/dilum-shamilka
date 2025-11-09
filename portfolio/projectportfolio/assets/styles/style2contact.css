@@ -287,7 +287,6 @@ footer figure:last-child div:nth-child(2) {
 
 /* Laptop (Max 1440px) */
 @media (max-width: 1440px) {
-    /* No major changes */
 }
 
 /* Laptop (Max 1024px) */
@@ -308,13 +307,11 @@ footer figure:last-child div:nth-child(2) {
         gap: 30px;
     }
 
-    /* Move green line from left to top when stacked */
     section:nth-child(3) article figure.contact-info {
         border-left: none;
         border-top: 5px solid var(--primary-color);
     }
 
-    /* Footer: Stacked content */
     footer article > figure:last-child {
         flex-direction: column;
         text-align: center;
@@ -331,7 +328,6 @@ footer figure:last-child div:nth-child(2) {
         padding: 30px 5%;
     }
 
-    /* Navigation Bar: Stacked items */
     nav {
         flex-direction: column;
         align-items: flex-start;
@@ -339,7 +335,6 @@ footer figure:last-child div:nth-child(2) {
         padding: 15px 5%;
     }
 
-    /* Nav Links Stacking */
     nav > div:last-child {
         display: flex;
         flex-direction: column;
@@ -354,7 +349,6 @@ footer figure:last-child div:nth-child(2) {
         font-size: 1em;
     }
 
-    /* Social Media Icons: Reduce size slightly */
     section:nth-child(2) img {
         width: 45px;
         height: 45px;
@@ -460,7 +454,7 @@ footer figure:last-child div:nth-child(2) {
 }
 
 .gallery-item img:hover {
-    transform: scale(1.03); /* Slight zoom on hover */
+    transform: scale(1.03);
     cursor: pointer;
     box-shadow: 0 0 15px rgba(0, 176, 141, 0.6);
 }
